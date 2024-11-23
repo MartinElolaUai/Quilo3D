@@ -25,7 +25,9 @@ namespace Quilo3D
 
             try
             {
-                bool loginExitoso = gestorLogin.Login(usuario, contrasena);
+                
+                bool loginExitoso = gestorLogin.ValidarUsuario(usuario, contrasena);
+                MessageBox.Show(loginExitoso.ToString());
                 if (loginExitoso)
                 {
                     QUILO3D formularioQuilo3D = new QUILO3D();

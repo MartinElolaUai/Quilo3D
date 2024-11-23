@@ -43,7 +43,7 @@
             // 
             // txtDescripcion
             // 
-            this.txtDescripcion.Location = new System.Drawing.Point(12, 32);
+            this.txtDescripcion.Location = new System.Drawing.Point(11, 64);
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(132, 20);
             this.txtDescripcion.TabIndex = 0;
@@ -53,7 +53,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Aquamarine;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(13, 16);
+            this.label1.Location = new System.Drawing.Point(12, 48);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(74, 13);
             this.label1.TabIndex = 1;
@@ -64,7 +64,7 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Aquamarine;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(13, 68);
+            this.label3.Location = new System.Drawing.Point(12, 100);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(112, 13);
             this.label3.TabIndex = 5;
@@ -72,7 +72,7 @@
             // 
             // txtConsumoElectrico
             // 
-            this.txtConsumoElectrico.Location = new System.Drawing.Point(12, 84);
+            this.txtConsumoElectrico.Location = new System.Drawing.Point(11, 116);
             this.txtConsumoElectrico.Name = "txtConsumoElectrico";
             this.txtConsumoElectrico.Size = new System.Drawing.Size(132, 20);
             this.txtConsumoElectrico.TabIndex = 4;
@@ -82,7 +82,7 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Aquamarine;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(13, 123);
+            this.label2.Location = new System.Drawing.Point(12, 155);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(52, 13);
             this.label2.TabIndex = 3;
@@ -91,7 +91,7 @@
             // cmbMaterial
             // 
             this.cmbMaterial.FormattingEnabled = true;
-            this.cmbMaterial.Location = new System.Drawing.Point(12, 139);
+            this.cmbMaterial.Location = new System.Drawing.Point(11, 171);
             this.cmbMaterial.Name = "cmbMaterial";
             this.cmbMaterial.Size = new System.Drawing.Size(132, 21);
             this.cmbMaterial.TabIndex = 6;
@@ -99,7 +99,7 @@
             // dgvListaImpresoras
             // 
             this.dgvListaImpresoras.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvListaImpresoras.Location = new System.Drawing.Point(184, 15);
+            this.dgvListaImpresoras.Location = new System.Drawing.Point(183, 47);
             this.dgvListaImpresoras.Name = "dgvListaImpresoras";
             this.dgvListaImpresoras.Size = new System.Drawing.Size(442, 243);
             this.dgvListaImpresoras.TabIndex = 7;
@@ -108,7 +108,7 @@
             // 
             this.btnAgregarImpresora.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btnAgregarImpresora.Font = new System.Drawing.Font("Impact", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregarImpresora.Location = new System.Drawing.Point(12, 177);
+            this.btnAgregarImpresora.Location = new System.Drawing.Point(11, 209);
             this.btnAgregarImpresora.Name = "btnAgregarImpresora";
             this.btnAgregarImpresora.Size = new System.Drawing.Size(132, 23);
             this.btnAgregarImpresora.TabIndex = 8;
@@ -120,7 +120,7 @@
             // 
             this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.btnEliminar.Font = new System.Drawing.Font("Impact", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminar.Location = new System.Drawing.Point(12, 235);
+            this.btnEliminar.Location = new System.Drawing.Point(11, 267);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(132, 23);
             this.btnEliminar.TabIndex = 9;
@@ -131,7 +131,7 @@
             // 
             this.btnModificar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btnModificar.Font = new System.Drawing.Font("Impact", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModificar.Location = new System.Drawing.Point(12, 206);
+            this.btnModificar.Location = new System.Drawing.Point(11, 238);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(132, 23);
             this.btnModificar.TabIndex = 10;
@@ -142,7 +142,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(639, 273);
+            this.ClientSize = new System.Drawing.Size(805, 501);
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnAgregarImpresora);

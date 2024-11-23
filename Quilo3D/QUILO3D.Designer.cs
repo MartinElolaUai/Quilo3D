@@ -173,7 +173,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1018, 613);
+            this.ClientSize = new System.Drawing.Size(805, 501);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.btnGestorMaterial);
             this.Controls.Add(this.btnGestorImpresora);

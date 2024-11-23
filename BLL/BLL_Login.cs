@@ -1,6 +1,7 @@
 ﻿using DAL;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,17 +13,17 @@ namespace BLL
     {
         MP_Login mapper = new MP_Login();
 
-        public bool Login(string usuario, string contrasena)
+        public bool ValidarUsuario(string usuario, string contrasena)
         {
-            try
+            DataTable resultado = mapper.ValidarUsuario(usuario, contrasena);
+
+            if (resultado.Rows.Count > 0)
             {
-                int resultado = mapper.Login(usuario, contrasena);
-                return resultado == 1;
+                int loginExitoso = Convert.ToInt32(resultado.Rows[0]["LoginExitoso"]);
+                return loginExitoso == 1; 
             }
-            catch (Exception ex)
-            {
-                throw new Exception("Error al intentar iniciar sesión: " + ex.Message);
-            }
+
+            return false;
         }
 
     }

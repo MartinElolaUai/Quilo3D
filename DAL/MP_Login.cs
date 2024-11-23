@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -11,17 +12,15 @@ namespace DAL
     {
         Acceso acceso = new Acceso();
 
-        public int Login(string usuario, string contrasenia)
-        {
-            int fa = 0;
-            
+        public DataTable ValidarUsuario(string usuario, string contrasenia)
+        {            
             SqlParameter[] parametros = new SqlParameter[2]
             {
-                new SqlParameter("@Usuario", usuario),
+                new SqlParameter("@NombreUsuario", usuario),
                 new SqlParameter("@Contrasenia", contrasenia)
             };
 
-            return acceso.Escribir("ValidarUsuario", parametros);
+            return acceso.Leer("ValidarUsuario", parametros);
         }
 
     }

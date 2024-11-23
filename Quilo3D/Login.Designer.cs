@@ -53,6 +53,7 @@
             this.txtContraseniaUsuario.Name = "txtContraseniaUsuario";
             this.txtContraseniaUsuario.Size = new System.Drawing.Size(211, 20);
             this.txtContraseniaUsuario.TabIndex = 1;
+            this.txtContraseniaUsuario.UseSystemPasswordChar = true;
             // 
             // txtNombreUsuario
             // 
