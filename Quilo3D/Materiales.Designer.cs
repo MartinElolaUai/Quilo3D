@@ -32,7 +32,7 @@
             this.btnEliminarMaterial = new System.Windows.Forms.Button();
             this.btnAgregarMaterial = new System.Windows.Forms.Button();
             this.dgvListaMateriales = new System.Windows.Forms.DataGridView();
-            this.cmbMaterial = new System.Windows.Forms.ComboBox();
+            this.cmbTipoMaterial = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtPesoKg = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -62,6 +62,7 @@
             this.btnEliminarMaterial.TabIndex = 19;
             this.btnEliminarMaterial.Text = "Eliminar Material";
             this.btnEliminarMaterial.UseVisualStyleBackColor = false;
+            this.btnEliminarMaterial.Click += new System.EventHandler(this.btnEliminarMaterial_Click);
             // 
             // btnAgregarMaterial
             // 
@@ -73,6 +74,7 @@
             this.btnAgregarMaterial.TabIndex = 18;
             this.btnAgregarMaterial.Text = "Agregar Material";
             this.btnAgregarMaterial.UseVisualStyleBackColor = false;
+            this.btnAgregarMaterial.Click += new System.EventHandler(this.btnAgregarMaterial_Click);
             // 
             // dgvListaMateriales
             // 
@@ -81,21 +83,20 @@
             this.dgvListaMateriales.Name = "dgvListaMateriales";
             this.dgvListaMateriales.Size = new System.Drawing.Size(442, 243);
             this.dgvListaMateriales.TabIndex = 17;
-            this.dgvListaMateriales.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvListaMateriales_CellContentClick);
             // 
-            // cmbMaterial
+            // cmbTipoMaterial
             // 
-            this.cmbMaterial.FormattingEnabled = true;
-            this.cmbMaterial.Items.AddRange(new object[] {
+            this.cmbTipoMaterial.FormattingEnabled = true;
+            this.cmbTipoMaterial.Items.AddRange(new object[] {
             "PLA",
             "PLA+",
             "PETG",
             "ABS",
             "PLA FLEX"});
-            this.cmbMaterial.Location = new System.Drawing.Point(95, 247);
-            this.cmbMaterial.Name = "cmbMaterial";
-            this.cmbMaterial.Size = new System.Drawing.Size(132, 21);
-            this.cmbMaterial.TabIndex = 16;
+            this.cmbTipoMaterial.Location = new System.Drawing.Point(95, 247);
+            this.cmbTipoMaterial.Name = "cmbTipoMaterial";
+            this.cmbTipoMaterial.Size = new System.Drawing.Size(132, 21);
+            this.cmbTipoMaterial.TabIndex = 16;
             // 
             // label3
             // 
@@ -153,7 +154,7 @@
             this.Controls.Add(this.btnEliminarMaterial);
             this.Controls.Add(this.btnAgregarMaterial);
             this.Controls.Add(this.dgvListaMateriales);
-            this.Controls.Add(this.cmbMaterial);
+            this.Controls.Add(this.cmbTipoMaterial);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtPesoKg);
             this.Controls.Add(this.label2);
@@ -174,7 +175,7 @@
         private System.Windows.Forms.Button btnEliminarMaterial;
         private System.Windows.Forms.Button btnAgregarMaterial;
         private System.Windows.Forms.DataGridView dgvListaMateriales;
-        private System.Windows.Forms.ComboBox cmbMaterial;
+        private System.Windows.Forms.ComboBox cmbTipoMaterial;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtPesoKg;
         private System.Windows.Forms.Label label2;

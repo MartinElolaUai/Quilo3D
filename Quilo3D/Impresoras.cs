@@ -14,14 +14,16 @@ namespace Quilo3D
 {
     public partial class Impresoras : Form
     {
+
+        BLL_Impresora gestorImpresora = new BLL_Impresora();
+        BLL_Material gestorMaterial = new BLL_Material();
+
         public Impresoras()
         {
             InitializeComponent();
             ActualizarListaImpresoras();
+            InicializarComboboxMaterial();
         }
-
-        BLL_Impresora gestorImpresora = new BLL_Impresora();
-        BLL_Material gestorMaterial = new BLL_Material();
 
         public void ActualizarListaImpresoras() 
         {
@@ -33,18 +35,14 @@ namespace Quilo3D
         {
             cmbMaterial.DataSource = null;
             cmbMaterial.DataSource = gestorMaterial.ListarMateriales();
-            cmbMaterial.DisplayMember = "Descripcion";
-        }
-
-        private void Impresoras_Load(object sender, EventArgs e)
-        {
-
+            cmbMaterial.DisplayMember = "Tipo";
         }
 
         private void btnAgregarImpresora_Click(object sender, EventArgs e)
         {
             Impresora impresora = new Impresora();
-            impresora.IdMaterial = Convert.ToInt32(cmbMaterial.SelectedValue);
+            Material material = cmbMaterial.SelectedItem as Material;
+            impresora.IdMaterial = material.IdMaterial;
             impresora.Descripcion = txtDescripcion.Text;
             impresora.ConsumoElectrico = Convert.ToInt32(txtConsumoElectrico.Text);
             impresora.IdImpresora = gestorImpresora.CalcularIdImpresora();

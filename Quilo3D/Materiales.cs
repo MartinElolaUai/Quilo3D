@@ -1,4 +1,5 @@
-﻿using BLL;
+﻿using BE;
+using BLL;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -27,9 +28,27 @@ namespace Quilo3D
             dgvListaMateriales.DataSource = gestorMaterial.ListarMateriales();
         }
 
-        private void dgvListaMateriales_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void btnAgregarMaterial_Click(object sender, EventArgs e)
         {
+            Material material = new Material();
+            decimal pesoKg = Convert.ToDecimal(txtPesoKg.Text);
+            string tipo = cmbTipoMaterial.Text;
+            material.IdMaterial = gestorMaterial.CalcularIdMaterial();
+            material.Color = txtColor.Text;
+            material.PesoKg = pesoKg;
+            material.Tipo = tipo;
+            material.CostoPorKg = gestorMaterial.CalcularCosto(tipo, pesoKg);
 
+            gestorMaterial.AltaMaterial(material);
+            ActualizarListaMateriales();
+        }
+
+        private void btnEliminarMaterial_Click(object sender, EventArgs e)
+        {
+            Material material = dgvListaMateriales.CurrentRow.DataBoundItem as Material;
+            gestorMaterial.BajaMaterial(material);
+            
+            ActualizarListaMateriales();
         }
     }
 }

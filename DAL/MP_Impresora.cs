@@ -19,7 +19,7 @@ namespace DAL
             {
                 new SqlParameter("@IdImpresora", impresora.IdImpresora),
                 new SqlParameter ("@IdMaterial", impresora.IdMaterial),
-                new SqlParameter ("@ConsumoElectrico", impresora.ConsumoElectrico),
+                new SqlParameter ("@ConsumoElectricoHr", impresora.ConsumoElectrico),
                 new SqlParameter ("@Descripcion", impresora.Descripcion)
             };
 
@@ -43,7 +43,7 @@ namespace DAL
             {
                 new SqlParameter("@IdImpresora", impresora.IdImpresora),
                 new SqlParameter("@IdMaterial", impresora.IdMaterial),
-                new SqlParameter("@ConsumoElectrico", impresora.ConsumoElectrico),
+                new SqlParameter("@ConsumoElectricoHr", impresora.ConsumoElectrico),
                 new SqlParameter("@Descripcion", impresora.Descripcion)
             };
 
