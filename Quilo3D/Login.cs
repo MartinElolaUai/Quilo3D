@@ -25,9 +25,7 @@ namespace Quilo3D
 
             try
             {
-                
                 bool loginExitoso = gestorLogin.ValidarUsuario(usuario, contrasena);
-                MessageBox.Show(loginExitoso.ToString());
                 if (loginExitoso)
                 {
                     QUILO3D formularioQuilo3D = new QUILO3D();
@@ -43,6 +41,11 @@ namespace Quilo3D
             {
                 MessageBox.Show("Error: " + ex.Message);
             }
+        }
+
+        private void logoQuilo_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

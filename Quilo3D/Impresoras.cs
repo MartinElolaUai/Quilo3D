@@ -29,6 +29,13 @@ namespace Quilo3D
             dgvListaImpresoras.DataSource = gestorImpresora.ListarImpresoras();
         }
 
+        public void InicializarComboboxMaterial()
+        {
+            cmbMaterial.DataSource = null;
+            cmbMaterial.DataSource = gestorMaterial.ListarMateriales();
+            cmbMaterial.DisplayMember = "Descripcion";
+        }
+
         private void Impresoras_Load(object sender, EventArgs e)
         {
 

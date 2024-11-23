@@ -47,7 +47,9 @@ namespace Quilo3D
 
         private void btnGestorMaterial_Click(object sender, EventArgs e)
         {
-            
+            Materiales formularioMateriales = new Materiales();
+            formularioMateriales.Show();
+            this.Hide();
         }
     }
 }

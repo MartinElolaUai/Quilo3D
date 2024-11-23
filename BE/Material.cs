@@ -10,7 +10,7 @@ namespace BE
     {
         private int idMaterial;
         private string color;
-        private int pesoKg;
+        private decimal pesoKg;
         private decimal costoPorKg;
         private string tipo;
 
@@ -26,7 +26,7 @@ namespace BE
             set { costoPorKg = value; }
         }
 
-        public int PesoKg
+        public decimal PesoKg
         {
             get { return pesoKg; }
             set { pesoKg = value; }
@@ -38,8 +38,7 @@ namespace BE
             set { color = value; }
         }
 
-
-        public int MyProperty
+        public int IdMaterial
         {
             get { return idMaterial; }
             set { idMaterial = value; }

@@ -31,14 +31,13 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
-            this.btnProcesarPedido = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.cmbMaterial = new System.Windows.Forms.ComboBox();
             this.cmbImpresorasDisponibles = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnProcesarPedido = new System.Windows.Forms.Button();
             this.btnGestorImpresora = new System.Windows.Forms.Button();
             this.btnGestorMaterial = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
@@ -67,16 +66,6 @@
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(172, 20);
             this.textBox4.TabIndex = 5;
-            // 
-            // btnProcesarPedido
-            // 
-            this.btnProcesarPedido.Location = new System.Drawing.Point(15, 226);
-            this.btnProcesarPedido.Name = "btnProcesarPedido";
-            this.btnProcesarPedido.Size = new System.Drawing.Size(172, 32);
-            this.btnProcesarPedido.TabIndex = 6;
-            this.btnProcesarPedido.Text = "Procesar pedido";
-            this.btnProcesarPedido.UseVisualStyleBackColor = true;
-            this.btnProcesarPedido.Click += new System.EventHandler(this.btnProcesarPedido_Click);
             // 
             // label1
             // 
@@ -131,14 +120,14 @@
             this.label4.TabIndex = 12;
             this.label4.Text = "Seleccionar Impresora";
             // 
-            // button2
+            // btnProcesarPedido
             // 
-            this.button2.Location = new System.Drawing.Point(15, 447);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(172, 32);
-            this.button2.TabIndex = 13;
-            this.button2.Text = "Procesar pedido";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnProcesarPedido.Location = new System.Drawing.Point(15, 447);
+            this.btnProcesarPedido.Name = "btnProcesarPedido";
+            this.btnProcesarPedido.Size = new System.Drawing.Size(172, 32);
+            this.btnProcesarPedido.TabIndex = 13;
+            this.btnProcesarPedido.Text = "Procesar pedido";
+            this.btnProcesarPedido.UseVisualStyleBackColor = true;
             // 
             // btnGestorImpresora
             // 
@@ -177,17 +166,17 @@
             this.Controls.Add(this.button4);
             this.Controls.Add(this.btnGestorMaterial);
             this.Controls.Add(this.btnGestorImpresora);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btnProcesarPedido);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.cmbImpresorasDisponibles);
             this.Controls.Add(this.cmbMaterial);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.btnProcesarPedido);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.dataGridView1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "QUILO3D";
             this.Text = "QUILO3D";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -201,14 +190,13 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Button btnProcesarPedido;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox cmbMaterial;
         private System.Windows.Forms.ComboBox cmbImpresorasDisponibles;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnProcesarPedido;
         private System.Windows.Forms.Button btnGestorImpresora;
         private System.Windows.Forms.Button btnGestorMaterial;
         private System.Windows.Forms.Button button4;

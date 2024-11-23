@@ -91,6 +91,12 @@
             // cmbMaterial
             // 
             this.cmbMaterial.FormattingEnabled = true;
+            this.cmbMaterial.Items.AddRange(new object[] {
+            "PLA",
+            "PLA+",
+            "PETG",
+            "ABS",
+            "PLA FLEX"});
             this.cmbMaterial.Location = new System.Drawing.Point(11, 171);
             this.cmbMaterial.Name = "cmbMaterial";
             this.cmbMaterial.Size = new System.Drawing.Size(132, 21);
@@ -153,6 +159,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtDescripcion);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Impresoras";
             this.Text = "Impresoras";
             this.Load += new System.EventHandler(this.Impresoras_Load);
