@@ -145,5 +145,8 @@
   <ItemGroup>
     <None Include="Resources\TemplateQUILO3D_LOGIN.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TemplateQUILO3D_Impresoras.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
