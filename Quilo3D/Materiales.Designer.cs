@@ -38,6 +38,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txtColor = new System.Windows.Forms.TextBox();
+            this.btnMenuAtras = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaMateriales)).BeginInit();
             this.SuspendLayout();
             // 
@@ -145,11 +146,22 @@
             this.txtColor.Size = new System.Drawing.Size(132, 20);
             this.txtColor.TabIndex = 11;
             // 
+            // btnMenuAtras
+            // 
+            this.btnMenuAtras.Location = new System.Drawing.Point(12, 466);
+            this.btnMenuAtras.Name = "btnMenuAtras";
+            this.btnMenuAtras.Size = new System.Drawing.Size(75, 23);
+            this.btnMenuAtras.TabIndex = 22;
+            this.btnMenuAtras.Text = "Atrás";
+            this.btnMenuAtras.UseVisualStyleBackColor = true;
+            this.btnMenuAtras.Click += new System.EventHandler(this.btnMenuAtras_Click);
+            // 
             // Materiales
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(805, 501);
+            this.Controls.Add(this.btnMenuAtras);
             this.Controls.Add(this.btnModificarMaterial);
             this.Controls.Add(this.btnEliminarMaterial);
             this.Controls.Add(this.btnAgregarMaterial);
@@ -181,5 +193,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtColor;
+        private System.Windows.Forms.Button btnMenuAtras;
     }
 }

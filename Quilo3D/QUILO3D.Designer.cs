@@ -28,177 +28,112 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.cmbMaterial = new System.Windows.Forms.ComboBox();
-            this.cmbImpresorasDisponibles = new System.Windows.Forms.ComboBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.btnProcesarPedido = new System.Windows.Forms.Button();
-            this.btnGestorImpresora = new System.Windows.Forms.Button();
-            this.btnGestorMaterial = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.btnMenuImpresoras = new System.Windows.Forms.Button();
+            this.btnMenuClientes = new System.Windows.Forms.Button();
+            this.btnMenuReportes = new System.Windows.Forms.Button();
+            this.btnMenuMateriales = new System.Windows.Forms.Button();
+            this.btnMenuPedidos = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // btnMenuImpresoras
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(295, 108);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(475, 371);
-            this.dataGridView1.TabIndex = 0;
+            this.btnMenuImpresoras.BackColor = System.Drawing.Color.Transparent;
+            this.btnMenuImpresoras.FlatAppearance.BorderSize = 0;
+            this.btnMenuImpresoras.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnMenuImpresoras.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnMenuImpresoras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMenuImpresoras.ForeColor = System.Drawing.Color.Transparent;
+            this.btnMenuImpresoras.Location = new System.Drawing.Point(593, 285);
+            this.btnMenuImpresoras.Name = "btnMenuImpresoras";
+            this.btnMenuImpresoras.Size = new System.Drawing.Size(121, 112);
+            this.btnMenuImpresoras.TabIndex = 0;
+            this.btnMenuImpresoras.UseVisualStyleBackColor = false;
+            this.btnMenuImpresoras.Click += new System.EventHandler(this.btnImpresoras_Click);
             // 
-            // textBox1
+            // btnMenuClientes
             // 
-            this.textBox1.Location = new System.Drawing.Point(15, 112);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(172, 20);
-            this.textBox1.TabIndex = 2;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.btnMenuClientes.BackColor = System.Drawing.Color.Transparent;
+            this.btnMenuClientes.FlatAppearance.BorderSize = 0;
+            this.btnMenuClientes.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnMenuClientes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnMenuClientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMenuClientes.ForeColor = System.Drawing.Color.Transparent;
+            this.btnMenuClientes.Location = new System.Drawing.Point(757, 285);
+            this.btnMenuClientes.Name = "btnMenuClientes";
+            this.btnMenuClientes.Size = new System.Drawing.Size(121, 112);
+            this.btnMenuClientes.TabIndex = 1;
+            this.btnMenuClientes.UseVisualStyleBackColor = false;
             // 
-            // textBox4
+            // btnMenuReportes
             // 
-            this.textBox4.Location = new System.Drawing.Point(15, 149);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(172, 20);
-            this.textBox4.TabIndex = 5;
+            this.btnMenuReportes.BackColor = System.Drawing.Color.Transparent;
+            this.btnMenuReportes.FlatAppearance.BorderSize = 0;
+            this.btnMenuReportes.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnMenuReportes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnMenuReportes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMenuReportes.ForeColor = System.Drawing.Color.Transparent;
+            this.btnMenuReportes.Location = new System.Drawing.Point(937, 285);
+            this.btnMenuReportes.Name = "btnMenuReportes";
+            this.btnMenuReportes.Size = new System.Drawing.Size(121, 112);
+            this.btnMenuReportes.TabIndex = 2;
+            this.btnMenuReportes.UseVisualStyleBackColor = false;
             // 
-            // label1
+            // btnMenuMateriales
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 96);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(63, 13);
-            this.label1.TabIndex = 7;
-            this.label1.Text = "Descripcion";
+            this.btnMenuMateriales.BackColor = System.Drawing.Color.Transparent;
+            this.btnMenuMateriales.FlatAppearance.BorderSize = 0;
+            this.btnMenuMateriales.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnMenuMateriales.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnMenuMateriales.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMenuMateriales.ForeColor = System.Drawing.Color.Transparent;
+            this.btnMenuMateriales.Location = new System.Drawing.Point(414, 285);
+            this.btnMenuMateriales.Name = "btnMenuMateriales";
+            this.btnMenuMateriales.Size = new System.Drawing.Size(121, 112);
+            this.btnMenuMateriales.TabIndex = 3;
+            this.btnMenuMateriales.UseVisualStyleBackColor = false;
+            this.btnMenuMateriales.Click += new System.EventHandler(this.btnMenuMateriales_Click);
             // 
-            // label2
+            // btnMenuPedidos
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 135);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(31, 13);
-            this.label2.TabIndex = 8;
-            this.label2.Text = "Peso";
+            this.btnMenuPedidos.BackColor = System.Drawing.Color.Transparent;
+            this.btnMenuPedidos.FlatAppearance.BorderSize = 0;
+            this.btnMenuPedidos.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnMenuPedidos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnMenuPedidos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMenuPedidos.ForeColor = System.Drawing.Color.Transparent;
+            this.btnMenuPedidos.Location = new System.Drawing.Point(241, 285);
+            this.btnMenuPedidos.Name = "btnMenuPedidos";
+            this.btnMenuPedidos.Size = new System.Drawing.Size(121, 112);
+            this.btnMenuPedidos.TabIndex = 4;
+            this.btnMenuPedidos.UseVisualStyleBackColor = false;
+            this.btnMenuPedidos.Click += new System.EventHandler(this.btnMenuPedidos_Click);
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 171);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(44, 13);
-            this.label3.TabIndex = 9;
-            this.label3.Text = "Material";
-            // 
-            // cmbMaterial
-            // 
-            this.cmbMaterial.FormattingEnabled = true;
-            this.cmbMaterial.Location = new System.Drawing.Point(15, 187);
-            this.cmbMaterial.Name = "cmbMaterial";
-            this.cmbMaterial.Size = new System.Drawing.Size(172, 21);
-            this.cmbMaterial.TabIndex = 10;
-            // 
-            // cmbImpresorasDisponibles
-            // 
-            this.cmbImpresorasDisponibles.FormattingEnabled = true;
-            this.cmbImpresorasDisponibles.Location = new System.Drawing.Point(15, 408);
-            this.cmbImpresorasDisponibles.Name = "cmbImpresorasDisponibles";
-            this.cmbImpresorasDisponibles.Size = new System.Drawing.Size(172, 21);
-            this.cmbImpresorasDisponibles.TabIndex = 11;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(12, 390);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(133, 13);
-            this.label4.TabIndex = 12;
-            this.label4.Text = "Seleccionar Impresora";
-            // 
-            // btnProcesarPedido
-            // 
-            this.btnProcesarPedido.Location = new System.Drawing.Point(15, 447);
-            this.btnProcesarPedido.Name = "btnProcesarPedido";
-            this.btnProcesarPedido.Size = new System.Drawing.Size(172, 32);
-            this.btnProcesarPedido.TabIndex = 13;
-            this.btnProcesarPedido.Text = "Procesar pedido";
-            this.btnProcesarPedido.UseVisualStyleBackColor = true;
-            // 
-            // btnGestorImpresora
-            // 
-            this.btnGestorImpresora.Location = new System.Drawing.Point(12, 12);
-            this.btnGestorImpresora.Name = "btnGestorImpresora";
-            this.btnGestorImpresora.Size = new System.Drawing.Size(201, 30);
-            this.btnGestorImpresora.TabIndex = 14;
-            this.btnGestorImpresora.Text = "Gestor Impresoras";
-            this.btnGestorImpresora.UseVisualStyleBackColor = true;
-            this.btnGestorImpresora.Click += new System.EventHandler(this.btnGestorImpresora_Click);
-            // 
-            // btnGestorMaterial
-            // 
-            this.btnGestorMaterial.Location = new System.Drawing.Point(232, 12);
-            this.btnGestorMaterial.Name = "btnGestorMaterial";
-            this.btnGestorMaterial.Size = new System.Drawing.Size(201, 30);
-            this.btnGestorMaterial.TabIndex = 15;
-            this.btnGestorMaterial.Text = "Gestor Material";
-            this.btnGestorMaterial.UseVisualStyleBackColor = true;
-            this.btnGestorMaterial.Click += new System.EventHandler(this.btnGestorMaterial_Click);
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(455, 12);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(201, 30);
-            this.button4.TabIndex = 16;
-            this.button4.Text = "Gestor Cliente";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // QUILO3D
+            // QUILO3D_PRUEBA
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(805, 501);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.btnGestorMaterial);
-            this.Controls.Add(this.btnGestorImpresora);
-            this.Controls.Add(this.btnProcesarPedido);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.cmbImpresorasDisponibles);
-            this.Controls.Add(this.cmbMaterial);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.dataGridView1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Name = "QUILO3D";
-            this.Text = "QUILO3D";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.BackgroundImage = global::Quilo3D.Properties.Resources.TemplateQUILO3D;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(1293, 656);
+            this.Controls.Add(this.btnMenuPedidos);
+            this.Controls.Add(this.btnMenuMateriales);
+            this.Controls.Add(this.btnMenuReportes);
+            this.Controls.Add(this.btnMenuClientes);
+            this.Controls.Add(this.btnMenuImpresoras);
+            this.DoubleBuffered = true;
+            this.Name = "QUILO3D_PRUEBA";
+            this.Text = "QUILO3D_PRUEBA";
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox cmbMaterial;
-        private System.Windows.Forms.ComboBox cmbImpresorasDisponibles;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button btnProcesarPedido;
-        private System.Windows.Forms.Button btnGestorImpresora;
-        private System.Windows.Forms.Button btnGestorMaterial;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnMenuImpresoras;
+        private System.Windows.Forms.Button btnMenuClientes;
+        private System.Windows.Forms.Button btnMenuReportes;
+        private System.Windows.Forms.Button btnMenuMateriales;
+        private System.Windows.Forms.Button btnMenuPedidos;
     }
 }

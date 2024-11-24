@@ -15,10 +15,9 @@ namespace DAL
 
         public int AltaImpresora(Impresora impresora) 
         {
-            SqlParameter[] parametros = new SqlParameter[4]
+            SqlParameter[] parametros = new SqlParameter[3]
             {
                 new SqlParameter("@IdImpresora", impresora.IdImpresora),
-                new SqlParameter ("@IdMaterial", impresora.IdMaterial),
                 new SqlParameter ("@ConsumoElectricoHr", impresora.ConsumoElectrico),
                 new SqlParameter ("@Descripcion", impresora.Descripcion)
             };
@@ -39,10 +38,9 @@ namespace DAL
 
         public int ModificarImpresora(Impresora impresora)
         {
-            SqlParameter[] parametros = new SqlParameter[4]
+            SqlParameter[] parametros = new SqlParameter[3]
             {
                 new SqlParameter("@IdImpresora", impresora.IdImpresora),
-                new SqlParameter("@IdMaterial", impresora.IdMaterial),
                 new SqlParameter("@ConsumoElectricoHr", impresora.ConsumoElectrico),
                 new SqlParameter("@Descripcion", impresora.Descripcion)
             };
@@ -59,7 +57,6 @@ namespace DAL
             {
                 Impresora impresora = new Impresora();
                 impresora.IdImpresora = Convert.ToInt32(dr["IdImpresora"]);
-                impresora.IdMaterial = Convert.ToInt32(dr["IdMaterial"]);
                 impresora.ConsumoElectrico = Convert.ToInt32(dr["ConsumoElectrico"]);
                 impresora.Descripcion = dr["Descripcion"].ToString();
 

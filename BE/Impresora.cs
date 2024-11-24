@@ -9,7 +9,6 @@ namespace BE
     public class Impresora
     {
         private int idImpresora;
-        private int idMaterial;
         private int consumoElectrico;
         private string descripcion;
 
@@ -24,13 +23,6 @@ namespace BE
             get { return consumoElectrico; }
             set { consumoElectrico = value; }
         }
-
-        public int IdMaterial
-        {
-            get { return idMaterial; }
-            set { idMaterial = value; }
-        }
-
         public int IdImpresora  
         {
             get { return idImpresora; }

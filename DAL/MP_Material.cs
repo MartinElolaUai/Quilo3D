@@ -20,7 +20,7 @@ namespace DAL
                 new SqlParameter("@IdMaterial", material.IdMaterial),
                 new SqlParameter("@Color", material.Color),
                 new SqlParameter("@PesoKg", material.PesoKg),
-                new SqlParameter("@CostoPorKg", material.CostoPorKg),
+                new SqlParameter("@Costo", material.Costo),
                 new SqlParameter("@Tipo", material.Tipo)
             };
 
@@ -48,7 +48,7 @@ namespace DAL
                 material.IdMaterial = Convert.ToInt32(dr["IdMaterial"]);
                 material.Color= Convert.ToString(dr["Color"]);
                 material.PesoKg = Convert.ToInt32(dr["PesoKg"]);
-                material.CostoPorKg = Convert.ToDecimal(dr["CostoPorKg"]);
+                material.Costo = Convert.ToDecimal(dr["Costo"]);
                 material.Tipo = Convert.ToString(dr["Tipo"]);
 
                 materiales.Add(material);

@@ -1,13 +1,6 @@
 ﻿using BE;
 using BLL;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Quilo3D
@@ -22,7 +15,6 @@ namespace Quilo3D
         {
             InitializeComponent();
             ActualizarListaImpresoras();
-            InicializarComboboxMaterial();
         }
 
         public void ActualizarListaImpresoras() 
@@ -31,24 +23,29 @@ namespace Quilo3D
             dgvListaImpresoras.DataSource = gestorImpresora.ListarImpresoras();
         }
 
-        public void InicializarComboboxMaterial()
-        {
-            cmbMaterial.DataSource = null;
-            cmbMaterial.DataSource = gestorMaterial.ListarMateriales();
-            cmbMaterial.DisplayMember = "Tipo";
-        }
-
         private void btnAgregarImpresora_Click(object sender, EventArgs e)
         {
             Impresora impresora = new Impresora();
-            Material material = cmbMaterial.SelectedItem as Material;
-            impresora.IdMaterial = material.IdMaterial;
             impresora.Descripcion = txtDescripcion.Text;
             impresora.ConsumoElectrico = Convert.ToInt32(txtConsumoElectrico.Text);
             impresora.IdImpresora = gestorImpresora.CalcularIdImpresora();
 
             gestorImpresora.AltaImpresora(impresora);
             ActualizarListaImpresoras();
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            Impresora impresora = dgvListaImpresoras.CurrentRow.DataBoundItem as Impresora;
+            gestorImpresora.BajaImpresora(impresora);
+            ActualizarListaImpresoras();
+        }
+
+        private void btnMenuAtras_Click(object sender, EventArgs e)
+        {
+            QUILO3D formularioQuilo3D = new QUILO3D();
+            formularioQuilo3D.Show();
+            this.Hide();
         }
     }
 }

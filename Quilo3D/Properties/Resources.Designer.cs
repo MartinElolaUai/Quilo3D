@@ -69,5 +69,25 @@ namespace Quilo3D.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap TemplateQUILO3D {
+            get {
+                object obj = ResourceManager.GetObject("TemplateQUILO3D", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap TemplateQUILO3D_LOGIN {
+            get {
+                object obj = ResourceManager.GetObject("TemplateQUILO3D_LOGIN", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

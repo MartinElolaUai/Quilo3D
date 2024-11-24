@@ -37,7 +37,7 @@ namespace Quilo3D
             material.Color = txtColor.Text;
             material.PesoKg = pesoKg;
             material.Tipo = tipo;
-            material.CostoPorKg = gestorMaterial.CalcularCosto(tipo, pesoKg);
+            material.Costo = gestorMaterial.CalcularCosto(tipo, pesoKg);
 
             gestorMaterial.AltaMaterial(material);
             ActualizarListaMateriales();
@@ -49,6 +49,13 @@ namespace Quilo3D
             gestorMaterial.BajaMaterial(material);
             
             ActualizarListaMateriales();
+        }
+
+        private void btnMenuAtras_Click(object sender, EventArgs e)
+        {
+            QUILO3D formularioQuilo3D = new QUILO3D();
+            formularioQuilo3D.Show();
+            this.Hide();
         }
     }
 }

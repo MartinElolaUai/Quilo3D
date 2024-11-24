@@ -1,5 +1,4 @@
-﻿using BLL;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -18,37 +17,24 @@ namespace Quilo3D
             InitializeComponent();
         }
 
-        BLL_Impresora gestorImpresora = new BLL_Impresora();
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void btnImpresoras_Click(object sender, EventArgs e)
         {
-
-        }
-
-        public void InicializarComboboxImpresoras() 
-        {
-            cmbImpresorasDisponibles.DataSource = null;
-            cmbImpresorasDisponibles.DataSource = gestorImpresora.ListarImpresoras();
-
-            cmbImpresorasDisponibles.DisplayMember = "Descripcion";
-        }
-
-        private void btnProcesarPedido_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnGestorImpresora_Click(object sender, EventArgs e)
-        {
-            Impresoras formularioImpresoras = new Impresoras();
-            formularioImpresoras.Show();
+            Impresoras impresoras = new Impresoras();
+            impresoras.Show();
             this.Hide();
         }
 
-        private void btnGestorMaterial_Click(object sender, EventArgs e)
+        private void btnMenuMateriales_Click(object sender, EventArgs e)
         {
-            Materiales formularioMateriales = new Materiales();
-            formularioMateriales.Show();
+            Materiales materiales = new Materiales();
+            materiales.Show();
+            this.Hide();
+        }
+
+        private void btnMenuPedidos_Click(object sender, EventArgs e)
+        {
+            Pedidos pedidos = new Pedidos();
+            pedidos.Show();
             this.Hide();
         }
     }
