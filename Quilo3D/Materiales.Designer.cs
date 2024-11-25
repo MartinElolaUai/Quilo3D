@@ -84,6 +84,7 @@
             this.dgvListaMateriales.Name = "dgvListaMateriales";
             this.dgvListaMateriales.Size = new System.Drawing.Size(442, 243);
             this.dgvListaMateriales.TabIndex = 17;
+            this.dgvListaMateriales.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvListaMateriales_CellContentClick);
             // 
             // cmbTipoMaterial
             // 

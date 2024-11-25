@@ -42,7 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BLL_DetalleVenta.cs" />
+    <Compile Include="BLL_Cliente.cs" />
     <Compile Include="BLL_Impresora.cs" />
     <Compile Include="BLL_Login.cs" />
     <Compile Include="BLL_Material.cs" />

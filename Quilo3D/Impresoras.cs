@@ -37,8 +37,15 @@ namespace Quilo3D
         private void btnEliminar_Click(object sender, EventArgs e)
         {
             Impresora impresora = dgvListaImpresoras.CurrentRow.DataBoundItem as Impresora;
-            gestorImpresora.BajaImpresora(impresora);
-            ActualizarListaImpresoras();
+            if (impresora != null)
+            {
+                gestorImpresora.BajaImpresora(impresora);
+                ActualizarListaImpresoras();
+            }
+            else
+            {
+                MessageBox.Show("Seleccione una impresora válida para eliminar.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void btnMenuAtras_Click(object sender, EventArgs e)
@@ -46,6 +53,23 @@ namespace Quilo3D
             QUILO3D formularioQuilo3D = new QUILO3D();
             formularioQuilo3D.Show();
             this.Hide();
+        }
+
+        private void dgvListaImpresoras_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Impresora impresora = dgvListaImpresoras.CurrentRow.DataBoundItem as Impresora;
+            txtDescripcion.Text = impresora.Descripcion;
+            txtConsumoElectrico.Text = impresora.ConsumoElectrico.ToString();
+        }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            Impresora impresora = dgvListaImpresoras.CurrentRow.DataBoundItem as Impresora;
+            impresora.Descripcion = txtDescripcion.Text;
+            impresora.ConsumoElectrico = Convert.ToInt32(txtConsumoElectrico.Text);
+
+            gestorImpresora.ModificarImpresora(impresora);
+            ActualizarListaImpresoras();
         }
     }
 }

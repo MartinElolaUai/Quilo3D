@@ -42,7 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Acceso.cs" />
-    <Compile Include="MP_DetalleVenta.cs" />
+    <Compile Include="MP_Cliente.cs" />
     <Compile Include="MP_Impresora.cs" />
     <Compile Include="MP_Login.cs" />
     <Compile Include="MP_Material.cs" />

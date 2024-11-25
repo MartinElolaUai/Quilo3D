@@ -35,8 +35,10 @@ namespace BLL
 
             foreach (Impresora impresora in impresoras)
             {
-                if (impresora.IdImpresora > id)
+                if (impresora.IdImpresora > id) 
+                {
                     id = impresora.IdImpresora;
+                }
             }
 
             return id + 1;

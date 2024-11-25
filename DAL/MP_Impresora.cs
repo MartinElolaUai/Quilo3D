@@ -22,8 +22,8 @@ namespace DAL
                 new SqlParameter ("@Descripcion", impresora.Descripcion)
             };
 
-            
             return acceso.Escribir("AltaImpresora", parametros);
+
         }
     
         public int BajaImpresora(Impresora impresora)

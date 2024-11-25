@@ -48,6 +48,7 @@
             this.btnModificar.TabIndex = 20;
             this.btnModificar.Text = "Modificar Impresora";
             this.btnModificar.UseVisualStyleBackColor = false;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // btnEliminar
             // 
@@ -80,6 +81,7 @@
             this.dgvListaImpresoras.Name = "dgvListaImpresoras";
             this.dgvListaImpresoras.Size = new System.Drawing.Size(745, 403);
             this.dgvListaImpresoras.TabIndex = 17;
+            this.dgvListaImpresoras.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvListaImpresoras_CellContentClick);
             // 
             // txtConsumoElectrico
             // 

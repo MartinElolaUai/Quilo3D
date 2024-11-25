@@ -61,5 +61,10 @@ namespace Quilo3D
             formularioQuilo3D.Show();
             this.Hide();
         }
+
+        private void dgvListaMateriales_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

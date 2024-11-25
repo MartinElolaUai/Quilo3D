@@ -38,15 +38,13 @@
             this.cmbImpresorasDisponibles = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.btnProcesarPedido = new System.Windows.Forms.Button();
-            this.btnGestorImpresora = new System.Windows.Forms.Button();
-            this.btnGestorMaterial = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
             this.txtTiempoImpresion = new System.Windows.Forms.TextBox();
             this.txtCostoImpresion = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.txtValorImpresion = new System.Windows.Forms.TextBox();
+            this.btnMenuAtras = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaProductos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -55,8 +53,9 @@
             this.dgvListaProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvListaProductos.Location = new System.Drawing.Point(268, 96);
             this.dgvListaProductos.Name = "dgvListaProductos";
-            this.dgvListaProductos.Size = new System.Drawing.Size(499, 371);
+            this.dgvListaProductos.Size = new System.Drawing.Size(745, 403);
             this.dgvListaProductos.TabIndex = 0;
+            this.dgvListaProductos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvListaProductos_CellContentClick);
             // 
             // txtDescripcionProducto
             // 
@@ -138,36 +137,6 @@
             this.btnProcesarPedido.UseVisualStyleBackColor = true;
             this.btnProcesarPedido.Click += new System.EventHandler(this.btnProcesarPedido_Click_1);
             // 
-            // btnGestorImpresora
-            // 
-            this.btnGestorImpresora.Location = new System.Drawing.Point(96, 12);
-            this.btnGestorImpresora.Name = "btnGestorImpresora";
-            this.btnGestorImpresora.Size = new System.Drawing.Size(201, 30);
-            this.btnGestorImpresora.TabIndex = 14;
-            this.btnGestorImpresora.Text = "Gestor Impresoras";
-            this.btnGestorImpresora.UseVisualStyleBackColor = true;
-            this.btnGestorImpresora.Click += new System.EventHandler(this.btnGestorImpresora_Click);
-            // 
-            // btnGestorMaterial
-            // 
-            this.btnGestorMaterial.Location = new System.Drawing.Point(316, 12);
-            this.btnGestorMaterial.Name = "btnGestorMaterial";
-            this.btnGestorMaterial.Size = new System.Drawing.Size(201, 30);
-            this.btnGestorMaterial.TabIndex = 15;
-            this.btnGestorMaterial.Text = "Gestor Material";
-            this.btnGestorMaterial.UseVisualStyleBackColor = true;
-            this.btnGestorMaterial.Click += new System.EventHandler(this.btnGestorMaterial_Click);
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(539, 12);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(201, 30);
-            this.button4.TabIndex = 16;
-            this.button4.Text = "Gestor Cliente";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
             // txtTiempoImpresion
             // 
             this.txtTiempoImpresion.Enabled = false;
@@ -222,20 +191,32 @@
             this.txtValorImpresion.Size = new System.Drawing.Size(172, 20);
             this.txtValorImpresion.TabIndex = 21;
             // 
+            // btnMenuAtras
+            // 
+            this.btnMenuAtras.BackColor = System.Drawing.Color.Transparent;
+            this.btnMenuAtras.FlatAppearance.BorderSize = 0;
+            this.btnMenuAtras.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnMenuAtras.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnMenuAtras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMenuAtras.Location = new System.Drawing.Point(1181, 12);
+            this.btnMenuAtras.Name = "btnMenuAtras";
+            this.btnMenuAtras.Size = new System.Drawing.Size(100, 106);
+            this.btnMenuAtras.TabIndex = 23;
+            this.btnMenuAtras.UseVisualStyleBackColor = false;
+            this.btnMenuAtras.Click += new System.EventHandler(this.btnMenuAtras_Click);
+            // 
             // Pedidos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(805, 501);
+            this.ClientSize = new System.Drawing.Size(1293, 656);
+            this.Controls.Add(this.btnMenuAtras);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.txtValorImpresion);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtCostoImpresion);
             this.Controls.Add(this.txtTiempoImpresion);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.btnGestorMaterial);
-            this.Controls.Add(this.btnGestorImpresora);
             this.Controls.Add(this.btnProcesarPedido);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.cmbImpresorasDisponibles);
@@ -267,14 +248,12 @@
         private System.Windows.Forms.ComboBox cmbImpresorasDisponibles;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnProcesarPedido;
-        private System.Windows.Forms.Button btnGestorImpresora;
-        private System.Windows.Forms.Button btnGestorMaterial;
-        private System.Windows.Forms.Button button4;
         private System.Windows.Forms.TextBox txtTiempoImpresion;
         private System.Windows.Forms.TextBox txtCostoImpresion;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtValorImpresion;
+        private System.Windows.Forms.Button btnMenuAtras;
     }
 }

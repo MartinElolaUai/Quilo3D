@@ -33,6 +33,7 @@
             this.btnMenuReportes = new System.Windows.Forms.Button();
             this.btnMenuMateriales = new System.Windows.Forms.Button();
             this.btnMenuPedidos = new System.Windows.Forms.Button();
+            this.btnMenuVentas = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnMenuImpresoras
@@ -63,6 +64,7 @@
             this.btnMenuClientes.Size = new System.Drawing.Size(121, 112);
             this.btnMenuClientes.TabIndex = 1;
             this.btnMenuClientes.UseVisualStyleBackColor = false;
+            this.btnMenuClientes.Click += new System.EventHandler(this.btnMenuClientes_Click);
             // 
             // btnMenuReportes
             // 
@@ -108,22 +110,38 @@
             this.btnMenuPedidos.UseVisualStyleBackColor = false;
             this.btnMenuPedidos.Click += new System.EventHandler(this.btnMenuPedidos_Click);
             // 
-            // QUILO3D_PRUEBA
+            // btnMenuVentas
+            // 
+            this.btnMenuVentas.BackColor = System.Drawing.Color.Transparent;
+            this.btnMenuVentas.FlatAppearance.BorderSize = 0;
+            this.btnMenuVentas.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnMenuVentas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnMenuVentas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMenuVentas.ForeColor = System.Drawing.Color.Transparent;
+            this.btnMenuVentas.Location = new System.Drawing.Point(937, 285);
+            this.btnMenuVentas.Name = "btnMenuVentas";
+            this.btnMenuVentas.Size = new System.Drawing.Size(121, 112);
+            this.btnMenuVentas.TabIndex = 5;
+            this.btnMenuVentas.UseVisualStyleBackColor = false;
+            this.btnMenuVentas.Click += new System.EventHandler(this.btnMenuVentas_Click);
+            // 
+            // QUILO3D
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.BackgroundImage = global::Quilo3D.Properties.Resources.TemplateQUILO3D;
+            this.BackgroundImage = global::Quilo3D.Properties.Resources.TemplateQUILO3D_Principal;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1293, 656);
+            this.Controls.Add(this.btnMenuVentas);
             this.Controls.Add(this.btnMenuPedidos);
             this.Controls.Add(this.btnMenuMateriales);
             this.Controls.Add(this.btnMenuReportes);
             this.Controls.Add(this.btnMenuClientes);
             this.Controls.Add(this.btnMenuImpresoras);
             this.DoubleBuffered = true;
-            this.Name = "QUILO3D_PRUEBA";
-            this.Text = "QUILO3D_PRUEBA";
+            this.Name = "QUILO3D";
+            this.Text = "QUILO3D";
             this.ResumeLayout(false);
 
         }
@@ -135,5 +153,6 @@
         private System.Windows.Forms.Button btnMenuReportes;
         private System.Windows.Forms.Button btnMenuMateriales;
         private System.Windows.Forms.Button btnMenuPedidos;
+        private System.Windows.Forms.Button btnMenuVentas;
     }
 }

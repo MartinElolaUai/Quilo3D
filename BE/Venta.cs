@@ -8,10 +8,30 @@ namespace BE
 {
     public class Venta
     {
-        private int idImpresora;
-        private int idMaterial;
-        private double consumoElectrico;
+        private int idVenta;
+        private int idCliente;
+        private int idProducto;
         private string descripcion;
+        private DateTime fechaVenta;
+        private double valor;
+
+        public int IdVenta
+        {
+            get { return idVenta; }
+            set { idVenta = value; }
+        }
+
+        public double Valor
+        {
+            get { return  valor; }
+            set {  valor = value; }
+        }
+
+        public DateTime FechaVenta
+        {
+            get { return fechaVenta; }
+            set { fechaVenta = value; }
+        }
 
         public string Descripcion
         {
@@ -19,22 +39,16 @@ namespace BE
             set { string descripcion = value; }
         }
 
-        public double ConsumoElectrico
+        public int IdProducto
         {
-            get { return consumoElectrico; }
-            set { consumoElectrico = value; }
+            get { return idProducto; }
+            set { idProducto = value; }
         }
 
-        public int IdMaterial
+        public int IdCliente
         {
-            get { return idMaterial; }
-            set { idMaterial = value; }
-        }
-
-        public int IdImpresora
-        {
-            get { return idImpresora; }
-            set { idImpresora = value; }
+            get { return idCliente; }
+            set { idCliente = value; }
         }
 
     }

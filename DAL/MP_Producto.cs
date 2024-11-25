@@ -41,6 +41,7 @@ namespace DAL
                 producto.IdMaterial = Convert.ToInt32(dr["IdMaterial"]);
                 producto.TiempoImpresion = Convert.ToDouble(dr["TiempoImpresion"]);
                 producto.Peso = Convert.ToDouble(dr["Peso"]);
+                producto.Costo = Convert.ToDouble(dr["Costo"]);
 
                 productos.Add(producto);
             }

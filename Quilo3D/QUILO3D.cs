@@ -37,5 +37,18 @@ namespace Quilo3D
             pedidos.Show();
             this.Hide();
         }
+        private void btnMenuVentas_Click(object sender, EventArgs e)
+        {
+            Ventas ventas = new Ventas();
+            ventas.Show();
+            this.Hide();
+        }
+
+        private void btnMenuClientes_Click(object sender, EventArgs e)
+        {
+            Clientes clientes = new Clientes();
+            clientes.Show();
+            this.Hide();
+        }
     }
 }

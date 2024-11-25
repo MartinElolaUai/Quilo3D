@@ -49,27 +49,6 @@ namespace Quilo3D
             dgvListaProductos.DataSource = gestorProducto.ListarProductos();
         }
 
-        private void btnGestorImpresora_Click(object sender, EventArgs e)
-        {
-            Impresoras formularioImpresoras = new Impresoras();
-            formularioImpresoras.Show();
-            this.Hide();
-        }
-
-        private void btnGestorMaterial_Click(object sender, EventArgs e)
-        {
-            Materiales formularioMateriales = new Materiales();
-            formularioMateriales.Show();
-            this.Hide();
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            QUILO3D formularioPrueba = new QUILO3D();
-            formularioPrueba.Show();
-            this.Hide();
-        }
-
         private void btnProcesarPedido_Click_1(object sender, EventArgs e)
         {
             Producto producto = new Producto();
@@ -94,6 +73,22 @@ namespace Quilo3D
 
             gestorProducto.AltaProducto(producto);
             ActualizarListaProductos();
+        }
+
+        private void dgvListaProductos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Producto producto = dgvListaProductos.CurrentRow.DataBoundItem as Producto;
+            txtCostoImpresion.Text = "$ " + producto.Costo.ToString();
+            txtTiempoImpresion.Text = producto.TiempoImpresion.ToString() + " horas";
+            txtValorImpresion.Text = "$ " + gestorProducto.CalcularValorTotalProducto(producto.Costo).ToString();
+            txtPesoProducto.Text = producto.Peso.ToString();
+        }
+
+        private void btnMenuAtras_Click(object sender, EventArgs e)
+        {
+            QUILO3D formularioQuilo3D = new QUILO3D();
+            formularioQuilo3D.Show();
+            this.Hide();
         }
     }
 }
