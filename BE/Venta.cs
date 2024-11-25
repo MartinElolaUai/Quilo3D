@@ -10,7 +10,7 @@ namespace BE
     {
         private int idImpresora;
         private int idMaterial;
-        private int consumoElectrico;
+        private double consumoElectrico;
         private string descripcion;
 
         public string Descripcion
@@ -19,7 +19,7 @@ namespace BE
             set { string descripcion = value; }
         }
 
-        public int ConsumoElectrico
+        public double ConsumoElectrico
         {
             get { return consumoElectrico; }
             set { consumoElectrico = value; }

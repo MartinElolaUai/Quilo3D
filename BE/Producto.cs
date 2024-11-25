@@ -11,23 +11,30 @@ namespace BE
         private int idProducto;
         private int idMaterial;
         private int idImpresora;
-        private decimal tiempoImpresion;
-        private decimal peso;
+        private double tiempoImpresion;
+        private double peso;
+        private double costo;
 
-        public decimal Peso
+        public double Costo
+        {
+            get { return costo; }
+            set { costo = value; }
+        }
+
+        public double Peso
         {
             get { return peso; }
             set { peso = value; }
         }
 
-        public decimal TiempoImpresion
+        public double TiempoImpresion
         {
             get { return tiempoImpresion; }
             set { tiempoImpresion = value; }
         }
 
 
-        public int MyProperty
+        public int IdImpresora
         {
             get { return idImpresora; }
             set { idImpresora = value; }

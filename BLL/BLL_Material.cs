@@ -27,9 +27,9 @@ namespace BLL
             return mapper.ListarMateriales();
         }
 
-        public decimal CalcularCosto(string material, decimal pesoEnKilos)
+        public double CalcularCosto(string material, double pesoEnKilos)
         {
-            Dictionary<string, decimal> costosMateriales = new Dictionary<string, decimal>()
+            Dictionary<string, double> costosMateriales = new Dictionary<string, double>()
             {
             { "PLA", 20000 },
             { "PLA+", 25000 },
@@ -38,7 +38,7 @@ namespace BLL
             { "PLA FLEX", 23500 }
             };
 
-            decimal costoPorKilo = costosMateriales[material];
+            double costoPorKilo = costosMateriales[material];
 
             return costoPorKilo * pesoEnKilos;
         }

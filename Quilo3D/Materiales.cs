@@ -7,6 +7,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -31,8 +32,11 @@ namespace Quilo3D
         private void btnAgregarMaterial_Click(object sender, EventArgs e)
         {
             Material material = new Material();
-            decimal pesoKg = Convert.ToDecimal(txtPesoKg.Text);
+            
+            string pesoTexto = Regex.Replace(txtPesoKg.Text, "\\.", ",");
+            double pesoKg = Convert.ToDouble(pesoTexto);
             string tipo = cmbTipoMaterial.Text;
+
             material.IdMaterial = gestorMaterial.CalcularIdMaterial();
             material.Color = txtColor.Text;
             material.PesoKg = pesoKg;

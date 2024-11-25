@@ -10,8 +10,8 @@ namespace BE
     {
         private int idMaterial;
         private string color;
-        private decimal pesoKg;
-        private decimal costo;
+        private double pesoKg;
+        private double costo;
         private string tipo;
 
         public string Tipo
@@ -20,13 +20,13 @@ namespace BE
             set { tipo = value; }
         }
 
-        public decimal Costo
+        public double Costo
         {
             get { return costo; }
             set { costo = value; }
         }
 
-        public decimal PesoKg
+        public double PesoKg
         {
             get { return pesoKg; }
             set { pesoKg = value; }
@@ -44,8 +44,10 @@ namespace BE
             set { idMaterial = value; }
         }
 
-
-
+        public string TipoColor
+        {
+            get { return $"{Tipo} - {Color}"; }
+        }
 
     }
 }

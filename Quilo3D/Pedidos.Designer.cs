@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvListaProductos = new System.Windows.Forms.DataGridView();
             this.txtDescripcionProducto = new System.Windows.Forms.TextBox();
             this.txtPesoProducto = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -41,22 +41,22 @@
             this.btnGestorImpresora = new System.Windows.Forms.Button();
             this.btnGestorMaterial = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtTiempoImpresion = new System.Windows.Forms.TextBox();
             this.txtCostoImpresion = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.txtValorImpresion = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListaProductos)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dgvListaProductos
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(268, 96);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(499, 371);
-            this.dataGridView1.TabIndex = 0;
+            this.dgvListaProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvListaProductos.Location = new System.Drawing.Point(268, 96);
+            this.dgvListaProductos.Name = "dgvListaProductos";
+            this.dgvListaProductos.Size = new System.Drawing.Size(499, 371);
+            this.dgvListaProductos.TabIndex = 0;
             // 
             // txtDescripcionProducto
             // 
@@ -64,7 +64,6 @@
             this.txtDescripcionProducto.Name = "txtDescripcionProducto";
             this.txtDescripcionProducto.Size = new System.Drawing.Size(172, 20);
             this.txtDescripcionProducto.TabIndex = 2;
-            this.txtDescripcionProducto.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // txtPesoProducto
             // 
@@ -89,9 +88,9 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(12, 135);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
+            this.label2.Size = new System.Drawing.Size(61, 13);
             this.label2.TabIndex = 8;
-            this.label2.Text = "Peso";
+            this.label2.Text = "Peso (kg)";
             // 
             // label3
             // 
@@ -137,6 +136,7 @@
             this.btnProcesarPedido.TabIndex = 13;
             this.btnProcesarPedido.Text = "Procesar pedido";
             this.btnProcesarPedido.UseVisualStyleBackColor = true;
+            this.btnProcesarPedido.Click += new System.EventHandler(this.btnProcesarPedido_Click_1);
             // 
             // btnGestorImpresora
             // 
@@ -168,13 +168,13 @@
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
-            // textBox1
+            // txtTiempoImpresion
             // 
-            this.textBox1.Enabled = false;
-            this.textBox1.Location = new System.Drawing.Point(15, 398);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(172, 20);
-            this.textBox1.TabIndex = 17;
+            this.txtTiempoImpresion.Enabled = false;
+            this.txtTiempoImpresion.Location = new System.Drawing.Point(15, 398);
+            this.txtTiempoImpresion.Name = "txtTiempoImpresion";
+            this.txtTiempoImpresion.Size = new System.Drawing.Size(172, 20);
+            this.txtTiempoImpresion.TabIndex = 17;
             // 
             // txtCostoImpresion
             // 
@@ -222,7 +222,7 @@
             this.txtValorImpresion.Size = new System.Drawing.Size(172, 20);
             this.txtValorImpresion.TabIndex = 21;
             // 
-            // QUILO3D
+            // Pedidos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -232,7 +232,7 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtCostoImpresion);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtTiempoImpresion);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.btnGestorMaterial);
             this.Controls.Add(this.btnGestorImpresora);
@@ -245,11 +245,11 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtPesoProducto);
             this.Controls.Add(this.txtDescripcionProducto);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvListaProductos);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Name = "QUILO3D";
+            this.Name = "Pedidos";
             this.Text = "QUILO3D";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListaProductos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -257,7 +257,7 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvListaProductos;
         private System.Windows.Forms.TextBox txtDescripcionProducto;
         private System.Windows.Forms.TextBox txtPesoProducto;
         private System.Windows.Forms.Label label1;
@@ -270,7 +270,7 @@
         private System.Windows.Forms.Button btnGestorImpresora;
         private System.Windows.Forms.Button btnGestorMaterial;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtTiempoImpresion;
         private System.Windows.Forms.TextBox txtCostoImpresion;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
