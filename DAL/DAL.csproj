@@ -47,7 +47,7 @@
     <Compile Include="MP_Impresora.cs" />
     <Compile Include="MP_Login.cs" />
     <Compile Include="MP_Material.cs" />
-    <Compile Include="MP_Producto.cs" />
+    <Compile Include="MP_Pedido.cs" />
     <Compile Include="MP_Venta.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

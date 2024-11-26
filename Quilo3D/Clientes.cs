@@ -27,6 +27,7 @@ namespace Quilo3D
         {
             dgvListaClientes.DataSource = null;
             dgvListaClientes.DataSource = gestorCliente.ListarClientes();
+            ConfigurarOrdenColumnas();
         }
 
         private void btnAltaCliente_Click(object sender, EventArgs e)
@@ -121,6 +122,21 @@ namespace Quilo3D
             txtNombreCliente.Text = dgvListaClientes.Rows[e.RowIndex].Cells["Nombre"].Value.ToString();
             txtApellidoCliente.Text = dgvListaClientes.Rows[e.RowIndex].Cells["Apellido"].Value.ToString();
             txtDniCliente.Text = dgvListaClientes.Rows[e.RowIndex].Cells["Dni"].Value.ToString();
+        }
+
+        private void btnGenerarXml_Click(object sender, EventArgs e)
+        {
+            gestorCliente.ExportarXml();
+        }
+
+        private void ConfigurarOrdenColumnas()
+        {
+            dgvListaClientes.Columns["IdCliente"].DisplayIndex = 0;
+            dgvListaClientes.Columns["Nombre"].DisplayIndex = 1;
+            dgvListaClientes.Columns["Apellido"].DisplayIndex = 2;
+            dgvListaClientes.Columns["Dni"].DisplayIndex = 3;
+            dgvListaClientes.Columns["ApellidoDni"].DisplayIndex = 4;
+            dgvListaClientes.Columns["ApellidoDni"].Visible = false;
         }
     }
 }

@@ -8,27 +8,27 @@ using System.Threading.Tasks;
 
 namespace BLL
 {
-    public class BLL_Producto
+    public class BLL_Pedido
     {
 
-        MP_Producto mapper = new MP_Producto();
+        MP_Pedido mapper = new MP_Pedido();
 
-        public int AltaProducto(Producto producto)
+        public int AltaProducto(Pedido producto)
         {
             return mapper.AltaProducto(producto);
         }
 
-        public List<Producto> ListarProductos()
+        public List<Pedido> ListarProductos()
         {
             return mapper.ListarProductos();
         }
 
         public int CalcularIdProducto()
         {
-            List<Producto> productos = ListarProductos();
+            List<Pedido> productos = ListarProductos();
             int id = 0;
 
-            foreach (Producto producto in productos)
+            foreach (Pedido producto in productos)
             {
                 if (producto.IdProducto > id)
                     id = producto.IdProducto;
@@ -49,6 +49,11 @@ namespace BLL
             // A todos los productos se le saca una ganancia del 30%
             return costoTotal * 1.3;
         }
-    
+
+        public void ExportarXml()
+        {
+            mapper.ExportarXml();
+        }
+
     }
 }

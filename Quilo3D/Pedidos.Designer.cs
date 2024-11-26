@@ -29,35 +29,29 @@
         private void InitializeComponent()
         {
             this.dgvListaProductos = new System.Windows.Forms.DataGridView();
-            this.txtPesoProducto = new System.Windows.Forms.TextBox();
             this.cmbMaterial = new System.Windows.Forms.ComboBox();
             this.cmbImpresorasDisponibles = new System.Windows.Forms.ComboBox();
-            this.btnProcesarPedido = new System.Windows.Forms.Button();
             this.txtTiempoImpresion = new System.Windows.Forms.TextBox();
             this.txtCostoImpresion = new System.Windows.Forms.TextBox();
             this.txtValorImpresion = new System.Windows.Forms.TextBox();
             this.btnMenuAtras = new System.Windows.Forms.Button();
             this.cmbSeleccionarCliente = new System.Windows.Forms.ComboBox();
             this.txtDescripcionVenta = new System.Windows.Forms.TextBox();
+            this.btnGenerarXml = new System.Windows.Forms.Button();
+            this.btnProcesarPedido = new Quilo3D.BotonProcesar();
+            this.txtPesoProducto = new Quilo3D.ValidatingTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaProductos)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvListaProductos
             // 
+            this.dgvListaProductos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvListaProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvListaProductos.Location = new System.Drawing.Point(464, 119);
             this.dgvListaProductos.Name = "dgvListaProductos";
             this.dgvListaProductos.Size = new System.Drawing.Size(745, 381);
             this.dgvListaProductos.TabIndex = 0;
             this.dgvListaProductos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvListaProductos_CellClick);
-            // 
-            // txtPesoProducto
-            // 
-            this.txtPesoProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPesoProducto.Location = new System.Drawing.Point(73, 291);
-            this.txtPesoProducto.Name = "txtPesoProducto";
-            this.txtPesoProducto.Size = new System.Drawing.Size(323, 53);
-            this.txtPesoProducto.TabIndex = 5;
             // 
             // cmbMaterial
             // 
@@ -76,18 +70,6 @@
             this.cmbImpresorasDisponibles.Name = "cmbImpresorasDisponibles";
             this.cmbImpresorasDisponibles.Size = new System.Drawing.Size(320, 39);
             this.cmbImpresorasDisponibles.TabIndex = 11;
-            // 
-            // btnProcesarPedido
-            // 
-            this.btnProcesarPedido.BackColor = System.Drawing.Color.Cyan;
-            this.btnProcesarPedido.Font = new System.Drawing.Font("Impact", 24.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnProcesarPedido.Location = new System.Drawing.Point(76, 551);
-            this.btnProcesarPedido.Name = "btnProcesarPedido";
-            this.btnProcesarPedido.Size = new System.Drawing.Size(320, 57);
-            this.btnProcesarPedido.TabIndex = 13;
-            this.btnProcesarPedido.Text = "Procesar pedido";
-            this.btnProcesarPedido.UseVisualStyleBackColor = false;
-            this.btnProcesarPedido.Click += new System.EventHandler(this.btnProcesarPedido_Click_1);
             // 
             // txtTiempoImpresion
             // 
@@ -147,6 +129,41 @@
             this.txtDescripcionVenta.Size = new System.Drawing.Size(323, 53);
             this.txtDescripcionVenta.TabIndex = 26;
             // 
+            // btnGenerarXml
+            // 
+            this.btnGenerarXml.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGenerarXml.Location = new System.Drawing.Point(1065, 506);
+            this.btnGenerarXml.Name = "btnGenerarXml";
+            this.btnGenerarXml.Size = new System.Drawing.Size(144, 36);
+            this.btnGenerarXml.TabIndex = 27;
+            this.btnGenerarXml.Text = "Exportar XML";
+            this.btnGenerarXml.UseVisualStyleBackColor = true;
+            this.btnGenerarXml.Click += new System.EventHandler(this.btnGenerarXml_Click);
+            // 
+            // btnProcesarPedido
+            // 
+            this.btnProcesarPedido.BackColor = System.Drawing.Color.LightBlue;
+            this.btnProcesarPedido.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnProcesarPedido.Font = new System.Drawing.Font("Impact", 25F, System.Drawing.FontStyle.Bold);
+            this.btnProcesarPedido.Location = new System.Drawing.Point(73, 552);
+            this.btnProcesarPedido.Name = "btnProcesarPedido";
+            this.btnProcesarPedido.Size = new System.Drawing.Size(320, 57);
+            this.btnProcesarPedido.TabIndex = 28;
+            this.btnProcesarPedido.Text = "Procesar pedido";
+            this.btnProcesarPedido.UseVisualStyleBackColor = false;
+            this.btnProcesarPedido.Click += new System.EventHandler(this.btnProcesarPedido_Click);
+            // 
+            // txtPesoProducto
+            // 
+            this.txtPesoProducto.BackColor = System.Drawing.Color.LightCoral;
+            this.txtPesoProducto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtPesoProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPesoProducto.Location = new System.Drawing.Point(73, 291);
+            this.txtPesoProducto.Name = "txtPesoProducto";
+            this.txtPesoProducto.Size = new System.Drawing.Size(320, 53);
+            this.txtPesoProducto.TabIndex = 29;
+            this.txtPesoProducto.ValidationPattern = "^\\d+$";
+            // 
             // Pedidos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -154,16 +171,17 @@
             this.BackgroundImage = global::Quilo3D.Properties.Resources.TrabajoQUILO3D_Pedidos;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1293, 656);
+            this.Controls.Add(this.txtPesoProducto);
+            this.Controls.Add(this.btnProcesarPedido);
+            this.Controls.Add(this.btnGenerarXml);
             this.Controls.Add(this.txtDescripcionVenta);
             this.Controls.Add(this.cmbSeleccionarCliente);
             this.Controls.Add(this.btnMenuAtras);
             this.Controls.Add(this.txtValorImpresion);
             this.Controls.Add(this.txtCostoImpresion);
             this.Controls.Add(this.txtTiempoImpresion);
-            this.Controls.Add(this.btnProcesarPedido);
             this.Controls.Add(this.cmbImpresorasDisponibles);
             this.Controls.Add(this.cmbMaterial);
-            this.Controls.Add(this.txtPesoProducto);
             this.Controls.Add(this.dgvListaProductos);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -179,15 +197,16 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dgvListaProductos;
-        private System.Windows.Forms.TextBox txtPesoProducto;
         private System.Windows.Forms.ComboBox cmbMaterial;
         private System.Windows.Forms.ComboBox cmbImpresorasDisponibles;
-        private System.Windows.Forms.Button btnProcesarPedido;
         private System.Windows.Forms.TextBox txtTiempoImpresion;
         private System.Windows.Forms.TextBox txtCostoImpresion;
         private System.Windows.Forms.TextBox txtValorImpresion;
         private System.Windows.Forms.Button btnMenuAtras;
         private System.Windows.Forms.ComboBox cmbSeleccionarCliente;
         private System.Windows.Forms.TextBox txtDescripcionVenta;
+        private System.Windows.Forms.Button btnGenerarXml;
+        private BotonProcesar btnProcesarPedido;
+        private ValidatingTextBox txtPesoProducto;
     }
 }

@@ -47,5 +47,10 @@ namespace BLL
             return id + 1;
         }
 
+        public void ExportarXml() 
+        {
+            mapper.ExportarXml();
+        }
+
     }
 }

@@ -50,7 +50,43 @@ namespace DAL
             return ventas;
         }
 
+        public List<Venta> ListarVentas(DateTime fechaInicio, DateTime fechaFin)
+        {
+            List<Venta> ventas = new List<Venta>();
+            SqlParameter[] parametros = new SqlParameter[]
+            {
+                new SqlParameter("@FechaInicio", fechaInicio),
+                new SqlParameter("@FechaFin", fechaFin)
+            };
 
+            DataTable dt = acceso.Leer("ListarVentasPorFecha", parametros);
+
+            foreach (DataRow dr in dt.Rows)
+            {
+                Venta venta = new Venta();
+
+                venta.IdVenta = Convert.ToInt32(dr["IdVenta"]);
+                venta.IdCliente = Convert.ToInt32(dr["IdCliente"]);
+                venta.IdProducto = Convert.ToInt32(dr["IdProducto"]);
+                venta.Valor = Convert.ToDouble(dr["Valor"]);
+                venta.FechaVenta = Convert.ToDateTime(dr["FechaVenta"]);
+                venta.Descripcion = Convert.ToString(dr["Descripcion"]);
+
+                ventas.Add(venta);
+            }
+
+            return ventas;
+        }
+
+        public void ExportarXML(DateTime fechaInicio, DateTime fechaFin)
+        {
+            SqlParameter[] parametros = new SqlParameter[]
+            {
+                new SqlParameter("@FechaInicio", fechaInicio),
+                new SqlParameter("@FechaFin", fechaFin)
+            };
+            acceso.ExportarSPXML("ListarVentasPorFecha", "VentasFiltradas", parametros);
+        }
 
     }
 }

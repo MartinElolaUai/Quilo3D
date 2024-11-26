@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BE
 {
-    public class Producto
+    public class Pedido
     {
         private int idProducto;
         private int idMaterial;

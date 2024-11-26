@@ -32,6 +32,11 @@ namespace BLL
             return mapper.ListarMateriales();
         }
 
+        public List<Material> ListarMateriales(string tipoMaterial)
+        {
+            return mapper.ListarMateriales(tipoMaterial);
+        }
+
         public double CalcularCosto(string material, double pesoEnKilos)
         {
             Dictionary<string, double> costosMateriales = new Dictionary<string, double>()
@@ -60,6 +65,16 @@ namespace BLL
             }
 
             return id + 1;
+        }
+
+        public void ExportarXml()
+        {
+            mapper.ExportarXml();
+        }
+
+        public void ExportarXml(string tipoMaterial)
+        {
+            mapper.ExportarXml(tipoMaterial);
         }
 
     }

@@ -46,7 +46,7 @@
     <Compile Include="BLL_Impresora.cs" />
     <Compile Include="BLL_Login.cs" />
     <Compile Include="BLL_Material.cs" />
-    <Compile Include="BLL_Producto.cs" />
+    <Compile Include="BLL_Pedido.cs" />
     <Compile Include="BLL_Venta.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

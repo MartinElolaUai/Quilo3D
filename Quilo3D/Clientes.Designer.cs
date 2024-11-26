@@ -30,20 +30,26 @@
         {
             this.dgvListaClientes = new System.Windows.Forms.DataGridView();
             this.txtNombreCliente = new System.Windows.Forms.TextBox();
-            this.txtDniCliente = new System.Windows.Forms.TextBox();
             this.txtApellidoCliente = new System.Windows.Forms.TextBox();
             this.btnAltaCliente = new System.Windows.Forms.Button();
             this.btnModificarCliente = new System.Windows.Forms.Button();
             this.btnBajaCliente = new System.Windows.Forms.Button();
             this.btnMenuAtras = new System.Windows.Forms.Button();
+            this.btnGenerarXml = new System.Windows.Forms.Button();
+            this.txtDniCliente = new Quilo3D.ValidatingTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaClientes)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvListaClientes
             // 
+            this.dgvListaClientes.AllowUserToAddRows = false;
+            this.dgvListaClientes.AllowUserToDeleteRows = false;
+            this.dgvListaClientes.AllowUserToOrderColumns = true;
+            this.dgvListaClientes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvListaClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvListaClientes.Location = new System.Drawing.Point(465, 150);
+            this.dgvListaClientes.Location = new System.Drawing.Point(465, 143);
             this.dgvListaClientes.Name = "dgvListaClientes";
+            this.dgvListaClientes.ReadOnly = true;
             this.dgvListaClientes.Size = new System.Drawing.Size(745, 403);
             this.dgvListaClientes.TabIndex = 0;
             this.dgvListaClientes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvListaClientes_CellClick);
@@ -55,14 +61,6 @@
             this.txtNombreCliente.Name = "txtNombreCliente";
             this.txtNombreCliente.Size = new System.Drawing.Size(323, 53);
             this.txtNombreCliente.TabIndex = 1;
-            // 
-            // txtDniCliente
-            // 
-            this.txtDniCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDniCliente.Location = new System.Drawing.Point(71, 331);
-            this.txtDniCliente.Name = "txtDniCliente";
-            this.txtDniCliente.Size = new System.Drawing.Size(323, 53);
-            this.txtDniCliente.TabIndex = 2;
             // 
             // txtApellidoCliente
             // 
@@ -123,6 +121,28 @@
             this.btnMenuAtras.UseVisualStyleBackColor = false;
             this.btnMenuAtras.Click += new System.EventHandler(this.btnMenuAtras_Click);
             // 
+            // btnGenerarXml
+            // 
+            this.btnGenerarXml.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGenerarXml.Location = new System.Drawing.Point(1066, 570);
+            this.btnGenerarXml.Name = "btnGenerarXml";
+            this.btnGenerarXml.Size = new System.Drawing.Size(144, 36);
+            this.btnGenerarXml.TabIndex = 25;
+            this.btnGenerarXml.Text = "Exportar XML";
+            this.btnGenerarXml.UseVisualStyleBackColor = true;
+            this.btnGenerarXml.Click += new System.EventHandler(this.btnGenerarXml_Click);
+            // 
+            // txtDniCliente
+            // 
+            this.txtDniCliente.BackColor = System.Drawing.Color.LightCoral;
+            this.txtDniCliente.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtDniCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDniCliente.Location = new System.Drawing.Point(72, 331);
+            this.txtDniCliente.Name = "txtDniCliente";
+            this.txtDniCliente.Size = new System.Drawing.Size(322, 53);
+            this.txtDniCliente.TabIndex = 26;
+            this.txtDniCliente.ValidationPattern = "^\\d+$";
+            // 
             // Clientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -130,12 +150,13 @@
             this.BackgroundImage = global::Quilo3D.Properties.Resources.TemplateQUILO3D_Clientes;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1293, 656);
+            this.Controls.Add(this.txtDniCliente);
+            this.Controls.Add(this.btnGenerarXml);
             this.Controls.Add(this.btnMenuAtras);
             this.Controls.Add(this.btnBajaCliente);
             this.Controls.Add(this.btnModificarCliente);
             this.Controls.Add(this.btnAltaCliente);
             this.Controls.Add(this.txtApellidoCliente);
-            this.Controls.Add(this.txtDniCliente);
             this.Controls.Add(this.txtNombreCliente);
             this.Controls.Add(this.dgvListaClientes);
             this.DoubleBuffered = true;
@@ -152,11 +173,12 @@
 
         private System.Windows.Forms.DataGridView dgvListaClientes;
         private System.Windows.Forms.TextBox txtNombreCliente;
-        private System.Windows.Forms.TextBox txtDniCliente;
         private System.Windows.Forms.TextBox txtApellidoCliente;
         private System.Windows.Forms.Button btnAltaCliente;
         private System.Windows.Forms.Button btnModificarCliente;
         private System.Windows.Forms.Button btnBajaCliente;
         private System.Windows.Forms.Button btnMenuAtras;
+        private System.Windows.Forms.Button btnGenerarXml;
+        private ValidatingTextBox txtDniCliente;
     }
 }

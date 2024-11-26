@@ -34,6 +34,7 @@ namespace DAL
             abrir();
             DataTable dt = new DataTable();
             SqlDataAdapter da = new SqlDataAdapter();
+            dt.TableName = "QUILO3D";
             da.SelectCommand = new SqlCommand();
             da.SelectCommand.CommandType = CommandType.StoredProcedure;
             da.SelectCommand.CommandText = sp;
@@ -96,7 +97,7 @@ namespace DAL
             }
             catch (Exception ex) 
             {
-                MessageBox.Show("Error de exportación XML", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error de exportación XML: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

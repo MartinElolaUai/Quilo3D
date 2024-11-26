@@ -66,5 +66,10 @@ namespace DAL
             return impresoras;
         }
 
+        public void ExportarXml() 
+        {
+            acceso.ExportarSPXML("ListarImpresoras", "Impresoras", null);
+        }
+
     }
 }

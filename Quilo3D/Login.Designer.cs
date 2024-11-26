@@ -31,6 +31,7 @@
             this.btnIniciarSesion = new System.Windows.Forms.Button();
             this.txtContraseniaUsuario = new System.Windows.Forms.TextBox();
             this.txtNombreUsuario = new System.Windows.Forms.TextBox();
+            this.scSQL = new System.ServiceProcess.ServiceController();
             this.SuspendLayout();
             // 
             // btnIniciarSesion
@@ -66,6 +67,10 @@
             this.txtNombreUsuario.Size = new System.Drawing.Size(507, 54);
             this.txtNombreUsuario.TabIndex = 2;
             // 
+            // scSQL
+            // 
+            this.scSQL.ServiceName = "SharedAccess";
+            // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -81,7 +86,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "frmLogin";
             this.Text = "Login";
-            this.Load += new System.EventHandler(this.frmLogin_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -92,6 +96,7 @@
         private System.Windows.Forms.Button btnIniciarSesion;
         private System.Windows.Forms.TextBox txtContraseniaUsuario;
         private System.Windows.Forms.TextBox txtNombreUsuario;
+        private System.ServiceProcess.ServiceController scSQL;
     }
 }
 

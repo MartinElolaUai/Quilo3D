@@ -9,11 +9,11 @@ using System.Threading.Tasks;
 
 namespace DAL
 {
-    public class MP_Producto
+    public class MP_Pedido
     {
         Acceso acceso = new Acceso();
 
-        public int AltaProducto(Producto producto)
+        public int AltaProducto(Pedido producto)
         {
             SqlParameter[] parametros = new SqlParameter[6]
             {
@@ -28,14 +28,14 @@ namespace DAL
             return acceso.Escribir("AltaProducto", parametros);
         }
 
-        public List<Producto> ListarProductos()
+        public List<Pedido> ListarProductos()
         {
-            List<Producto> productos = new List<Producto>();
+            List<Pedido> productos = new List<Pedido>();
             DataTable dt = acceso.Leer("ListarProductos", null);
 
             foreach (DataRow dr in dt.Rows)
             {
-                Producto producto = new Producto();
+                Pedido producto = new Pedido();
                 producto.IdProducto = Convert.ToInt32(dr["IdProducto"]);
                 producto.IdImpresora = Convert.ToInt32(dr["IdImpresora"]);
                 producto.IdMaterial = Convert.ToInt32(dr["IdMaterial"]);
@@ -49,6 +49,10 @@ namespace DAL
             return productos;
         }
 
+        public void ExportarXml() 
+        {
+            acceso.ExportarSPXML("ListarProductos", "Pedidos", null);
+        }
 
     }
 }

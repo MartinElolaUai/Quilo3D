@@ -22,6 +22,11 @@ namespace BLL
             return mapper.ListarVentas();
         }
 
+        public List<Venta> ListarVentas(DateTime fechaInicio, DateTime fechaFin)
+        {
+            return mapper.ListarVentas(fechaInicio, fechaFin);
+        }
+
         public int CalcularIdVenta() 
         {
             List<Venta> ventas = ListarVentas();
@@ -34,6 +39,49 @@ namespace BLL
             }
 
             return id + 1;
+        }
+
+        public void ExportarXml(DateTime fechaInicio, DateTime fechaFin) 
+        {
+            mapper.ExportarXML(fechaInicio, fechaFin);
+        }
+
+        public double CalcularTotalRecaudado()
+        {
+            List<Venta> ventas = ListarVentas();
+            double total = 0;
+
+            foreach (Venta venta in ventas)
+            {
+                total += venta.Valor;
+            }
+
+            return total;
+        }
+
+        public double CalcularTotalRecaudado(DateTime fechaInicio, DateTime fechaFin)
+        {
+            List<Venta> ventas = ListarVentas(fechaInicio, fechaFin);
+            double total = 0;
+
+            foreach (Venta venta in ventas)
+            {
+                total += venta.Valor;
+            }
+
+            return total;
+        }
+
+        public double CalcularTotalGanancia()
+        {
+            double total = CalcularTotalRecaudado();
+            return total * 0.3;
+        }
+
+        public double CalcularTotalGanancia(DateTime fechaInicio, DateTime fechaFin)
+        {
+            double total = CalcularTotalRecaudado(fechaInicio, fechaFin);
+            return total * 0.3;
         }
 
     }

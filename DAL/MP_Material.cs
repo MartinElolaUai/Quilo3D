@@ -71,5 +71,43 @@ namespace DAL
             return materiales;
         }
 
+        public List<Material> ListarMateriales(string tipo) 
+        {
+            List<Material> materiales = new List<Material>();
+            SqlParameter[] parametros = new SqlParameter[1] 
+            {
+                new SqlParameter("@Tipo", tipo)
+            };
+            DataTable dt = acceso.Leer("ListarMaterialesPorTipo", parametros);
+
+            foreach (DataRow dr in dt.Rows)
+            {
+                Material material = new Material();
+                material.IdMaterial = Convert.ToInt32(dr["IdMaterial"]);
+                material.Color = Convert.ToString(dr["Color"]);
+                material.PesoKg = Convert.ToDouble(dr["PesoKg"]);
+                material.Costo = Convert.ToDouble(dr["Costo"]);
+                material.Tipo = Convert.ToString(dr["Tipo"]);
+
+                materiales.Add(material);
+            }
+
+            return materiales;
+        }
+
+        public void ExportarXml(string tipo) 
+        {
+            SqlParameter[] parametros = new SqlParameter[1]
+            {
+                new SqlParameter("@Tipo", tipo)
+            };
+            acceso.ExportarSPXML("ListarMaterialesPorTipo", "Stock_" + tipo, parametros);
+        }
+
+        public void ExportarXml() 
+        {
+            acceso.ExportarSPXML("ListarMateriales", "Materiales", null);
+        }
+
     }
 }

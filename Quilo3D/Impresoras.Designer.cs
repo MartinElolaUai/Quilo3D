@@ -35,6 +35,7 @@
             this.txtConsumoElectrico = new System.Windows.Forms.TextBox();
             this.txtDescripcion = new System.Windows.Forms.TextBox();
             this.btnMenuAtras = new System.Windows.Forms.Button();
+            this.btnGenerarXml = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaImpresoras)).BeginInit();
             this.SuspendLayout();
             // 
@@ -76,6 +77,7 @@
             // 
             // dgvListaImpresoras
             // 
+            this.dgvListaImpresoras.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvListaImpresoras.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvListaImpresoras.Location = new System.Drawing.Point(418, 143);
             this.dgvListaImpresoras.Name = "dgvListaImpresoras";
@@ -113,6 +115,17 @@
             this.btnMenuAtras.UseVisualStyleBackColor = false;
             this.btnMenuAtras.Click += new System.EventHandler(this.btnMenuAtras_Click);
             // 
+            // btnGenerarXml
+            // 
+            this.btnGenerarXml.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGenerarXml.Location = new System.Drawing.Point(1019, 552);
+            this.btnGenerarXml.Name = "btnGenerarXml";
+            this.btnGenerarXml.Size = new System.Drawing.Size(144, 36);
+            this.btnGenerarXml.TabIndex = 26;
+            this.btnGenerarXml.Text = "Exportar XML";
+            this.btnGenerarXml.UseVisualStyleBackColor = true;
+            this.btnGenerarXml.Click += new System.EventHandler(this.btnGenerarXml_Click);
+            // 
             // Impresoras
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -120,6 +133,7 @@
             this.BackgroundImage = global::Quilo3D.Properties.Resources.TemplateQUILO3D_Impresoras;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1293, 656);
+            this.Controls.Add(this.btnGenerarXml);
             this.Controls.Add(this.btnMenuAtras);
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.btnEliminar);
@@ -146,5 +160,6 @@
         private System.Windows.Forms.TextBox txtConsumoElectrico;
         private System.Windows.Forms.TextBox txtDescripcion;
         private System.Windows.Forms.Button btnMenuAtras;
+        private System.Windows.Forms.Button btnGenerarXml;
     }
 }

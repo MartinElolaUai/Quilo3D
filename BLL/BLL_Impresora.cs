@@ -72,5 +72,10 @@ namespace BLL
             return costoTotalLuz;
         }
 
+        public void ExportarXml() 
+        {
+            mapper.ExportarXml();
+        }
+
     }
 }

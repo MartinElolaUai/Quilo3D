@@ -21,6 +21,7 @@ namespace Quilo3D
         {
             dgvListaImpresoras.DataSource = null;
             dgvListaImpresoras.DataSource = gestorImpresora.ListarImpresoras();
+            ConfigurarOrdenColumnas();
         }
 
         private void btnAgregarImpresora_Click(object sender, EventArgs e)
@@ -57,9 +58,11 @@ namespace Quilo3D
             this.Hide();
         }
 
-        private void dgvListaImpresoras_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void ConfigurarOrdenColumnas()
         {
-
+            dgvListaImpresoras.Columns["IdImpresora"].DisplayIndex = 0;
+            dgvListaImpresoras.Columns["ConsumoElectrico"].DisplayIndex = 1;
+            dgvListaImpresoras.Columns["Descripcion"].DisplayIndex = 2;
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
@@ -102,6 +105,11 @@ namespace Quilo3D
             if (e.RowIndex == -1) return;
             txtConsumoElectrico.Text = dgvListaImpresoras.Rows[e.RowIndex].Cells["ConsumoElectrico"].Value.ToString();
             txtDescripcion.Text = dgvListaImpresoras.Rows[e.RowIndex].Cells["Descripcion"].Value.ToString();
+        }
+
+        private void btnGenerarXml_Click(object sender, EventArgs e)
+        {
+            gestorImpresora.ExportarXml();
         }
     }
 }

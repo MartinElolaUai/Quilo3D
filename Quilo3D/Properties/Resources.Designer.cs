@@ -113,9 +113,29 @@ namespace Quilo3D.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap TemplateQUILO3D_Materiales {
+            get {
+                object obj = ResourceManager.GetObject("TemplateQUILO3D_Materiales", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap TemplateQUILO3D_Principal {
             get {
                 object obj = ResourceManager.GetObject("TemplateQUILO3D_Principal", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap TemplateQUILO3D_Ventas {
+            get {
+                object obj = ResourceManager.GetObject("TemplateQUILO3D_Ventas", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

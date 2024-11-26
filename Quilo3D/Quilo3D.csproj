@@ -44,6 +44,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.ServiceProcess" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -55,11 +56,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BotonProcesar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BotonProcesar.Designer.cs">
+      <DependentUpon>BotonProcesar.cs</DependentUpon>
+    </Compile>
     <Compile Include="Clientes.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Clientes.Designer.cs">
       <DependentUpon>Clientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataGridViewConBotonEliminar.cs">
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Impresoras.cs">
       <SubType>Form</SubType>
@@ -92,6 +102,18 @@
     </Compile>
     <Compile Include="QUILO3D.Designer.cs">
       <DependentUpon>QUILO3D.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DateRange.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DateRange.Designer.cs">
+      <DependentUpon>DateRange.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ValidatingTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ValidatingTextBox.Designer.cs">
+      <DependentUpon>ValidatingTextBox.cs</DependentUpon>
     </Compile>
     <Compile Include="Ventas.cs">
       <SubType>Form</SubType>
@@ -174,6 +196,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\TrabajoQUILO3D_Pedidos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TemplateQUILO3D_Materiales.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TemplateQUILO3D_Ventas.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

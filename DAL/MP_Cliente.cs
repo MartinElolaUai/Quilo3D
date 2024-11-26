@@ -65,5 +65,10 @@ namespace DAL
             return clientes;
         }
 
+        public void ExportarXml() 
+        {
+            acceso.ExportarSPXML("ListarClientes", "Clientes", null);
+        }
+
     }
 }
