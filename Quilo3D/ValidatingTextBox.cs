@@ -13,7 +13,15 @@ namespace Quilo3D
 {
     public partial class ValidatingTextBox : TextBox
     {
-        public string ValidationPattern { get; set; }
+
+        private string validationPattern;
+
+        public string ValidationPattern
+        {
+            get { return  validationPattern; }
+            set {  validationPattern = value; }
+        }
+
         public bool IsValid { get; private set; }
 
         public ValidatingTextBox()
@@ -26,7 +34,7 @@ namespace Quilo3D
         protected override void OnTextChanged(EventArgs e)
         {
             base.OnTextChanged(e);
-            IsValid = Regex.IsMatch(this.Text, ValidationPattern);
+            IsValid = Regex.IsMatch(this.Text, @"^\d+([.,]\d+)?$");
             this.BackColor = IsValid ? Color.White : Color.LightCoral;
         }
     }
