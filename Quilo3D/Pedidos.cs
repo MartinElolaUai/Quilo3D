@@ -102,7 +102,7 @@ namespace Quilo3D
                 MessageBox.Show("Complete todos los campos para continuar.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
-            if (!int.TryParse(txtPesoProducto.Text, out _)) 
+            if (!double.TryParse(txtPesoProducto.Text, out _)) 
             {
                 MessageBox.Show("El campo 'Peso en Kg' debe ser un número.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
@@ -137,6 +137,13 @@ namespace Quilo3D
             cmbMaterial.DataSource = gestorMaterial.ListarMateriales();
 
             cmbMaterial.DisplayMember = "TipoColor";
+        }
+
+        private void dgvListaProductos_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex == -1) return;
+            Producto producto = dgvListaProductos.Rows[e.RowIndex].DataBoundItem as Producto;
+            ActualizarDatosProducto(producto.Costo.ToString(), producto.TiempoImpresion.ToString(), gestorProducto.CalcularValorTotalProducto(producto.Costo).ToString());
         }
     }
 }

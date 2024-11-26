@@ -81,7 +81,7 @@
             this.dgvListaImpresoras.Name = "dgvListaImpresoras";
             this.dgvListaImpresoras.Size = new System.Drawing.Size(745, 403);
             this.dgvListaImpresoras.TabIndex = 17;
-            this.dgvListaImpresoras.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvListaImpresoras_CellContentClick);
+            this.dgvListaImpresoras.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvListaImpresoras_CellClick);
             // 
             // txtConsumoElectrico
             // 

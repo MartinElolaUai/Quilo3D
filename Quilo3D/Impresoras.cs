@@ -59,9 +59,7 @@ namespace Quilo3D
 
         private void dgvListaImpresoras_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            Impresora impresora = dgvListaImpresoras.CurrentRow.DataBoundItem as Impresora;
-            txtDescripcion.Text = impresora.Descripcion;
-            txtConsumoElectrico.Text = impresora.ConsumoElectrico.ToString();
+
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
@@ -97,6 +95,13 @@ namespace Quilo3D
             }
 
             return true;
+        }
+
+        private void dgvListaImpresoras_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex == -1) return;
+            txtConsumoElectrico.Text = dgvListaImpresoras.Rows[e.RowIndex].Cells["ConsumoElectrico"].Value.ToString();
+            txtDescripcion.Text = dgvListaImpresoras.Rows[e.RowIndex].Cells["Descripcion"].Value.ToString();
         }
     }
 }

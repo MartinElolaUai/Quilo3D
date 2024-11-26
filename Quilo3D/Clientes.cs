@@ -82,14 +82,6 @@ namespace Quilo3D
             this.Hide();
         }
 
-        private void dgvListaClientes_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            Cliente cliente = dgvListaClientes.CurrentRow.DataBoundItem as Cliente;
-            txtNombreCliente.Text = cliente.Nombre;
-            txtApellidoCliente.Text = cliente.Apellido;
-            txtDniCliente.Text = cliente.Dni.ToString();
-        }
-
         private bool ValidarCampos() 
         {
             if (txtNombreCliente.Text == "" || txtApellidoCliente.Text == "" || txtDniCliente.Text == "")
@@ -123,5 +115,12 @@ namespace Quilo3D
             return Regex.IsMatch(dni, dniPattern);
         }
 
+        private void dgvListaClientes_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex == -1) return;
+            txtNombreCliente.Text = dgvListaClientes.Rows[e.RowIndex].Cells["Nombre"].Value.ToString();
+            txtApellidoCliente.Text = dgvListaClientes.Rows[e.RowIndex].Cells["Apellido"].Value.ToString();
+            txtDniCliente.Text = dgvListaClientes.Rows[e.RowIndex].Cells["Dni"].Value.ToString();
+        }
     }
 }

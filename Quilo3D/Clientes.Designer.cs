@@ -46,7 +46,7 @@
             this.dgvListaClientes.Name = "dgvListaClientes";
             this.dgvListaClientes.Size = new System.Drawing.Size(745, 403);
             this.dgvListaClientes.TabIndex = 0;
-            this.dgvListaClientes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvListaClientes_CellContentClick);
+            this.dgvListaClientes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvListaClientes_CellClick);
             // 
             // txtNombreCliente
             // 
@@ -140,6 +140,7 @@
             this.Controls.Add(this.dgvListaClientes);
             this.DoubleBuffered = true;
             this.Name = "Clientes";
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.Text = "Clientes";
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaClientes)).EndInit();
             this.ResumeLayout(false);

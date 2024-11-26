@@ -37,6 +37,20 @@ namespace DAL
             return acceso.Escribir("BajaMaterial", parametros);
         }
 
+        public int ModificarMaterial(Material material)
+        {
+            SqlParameter[] parametros = new SqlParameter[5]
+            {
+                new SqlParameter("@IdMaterial", material.IdMaterial),
+                new SqlParameter("@Color", material.Color),
+                new SqlParameter("@PesoKg", Convert.ToDecimal(material.PesoKg)),
+                new SqlParameter("@Costo", Convert.ToDecimal(material.Costo)),
+                new SqlParameter("@Tipo", material.Tipo)
+            };
+
+            return acceso.Escribir("ModificarMaterial", parametros);
+        }
+
         public List<Material> ListarMateriales()
         {
             List<Material> materiales = new List<Material>();

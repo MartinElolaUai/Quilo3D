@@ -52,6 +52,7 @@
             this.btnModificarMaterial.TabIndex = 20;
             this.btnModificarMaterial.Text = "Modificar Material";
             this.btnModificarMaterial.UseVisualStyleBackColor = false;
+            this.btnModificarMaterial.Click += new System.EventHandler(this.btnModificarMaterial_Click);
             // 
             // btnEliminarMaterial
             // 
@@ -84,7 +85,7 @@
             this.dgvListaMateriales.Name = "dgvListaMateriales";
             this.dgvListaMateriales.Size = new System.Drawing.Size(442, 243);
             this.dgvListaMateriales.TabIndex = 17;
-            this.dgvListaMateriales.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvListaMateriales_CellContentClick);
+            this.dgvListaMateriales.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvListaMateriales_CellClick);
             // 
             // cmbTipoMaterial
             // 
@@ -175,6 +176,7 @@
             this.Controls.Add(this.txtColor);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Materiales";
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.Text = "Materiales";
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaMateriales)).EndInit();
             this.ResumeLayout(false);

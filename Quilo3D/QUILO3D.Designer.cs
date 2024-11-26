@@ -141,6 +141,7 @@
             this.Controls.Add(this.btnMenuImpresoras);
             this.DoubleBuffered = true;
             this.Name = "QUILO3D";
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.Text = "QUILO3D";
             this.ResumeLayout(false);
 

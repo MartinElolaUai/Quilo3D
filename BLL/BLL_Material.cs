@@ -22,6 +22,11 @@ namespace BLL
             return mapper.BajaMaterial(material);
         }
 
+        public int ModificarMaterial(Material material)
+        {
+            return mapper.ModificarMaterial(material);
+        }
+
         public List<Material> ListarMateriales() 
         {
             return mapper.ListarMateriales();

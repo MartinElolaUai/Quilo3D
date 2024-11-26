@@ -78,7 +78,7 @@ namespace Quilo3D
                 MessageBox.Show("Complete todos los campos para continuar.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
-            if (!int.TryParse(txtPesoKg.Text, out _)) 
+            if (!double.TryParse(txtPesoKg.Text, out _)) 
             {
                 MessageBox.Show("El campo 'Peso en Kg' debe ser un número.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
@@ -88,8 +88,31 @@ namespace Quilo3D
             return true;
         }
 
-        private void dgvListaMateriales_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void dgvListaMateriales_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            if (e.RowIndex == -1) return;
+            txtColor.Text = dgvListaMateriales.Rows[e.RowIndex].Cells["Color"].Value.ToString();
+            txtPesoKg.Text = dgvListaMateriales.Rows[e.RowIndex].Cells["PesoKg"].Value.ToString();
+            cmbTipoMaterial.Text = dgvListaMateriales.Rows[e.RowIndex].Cells["Tipo"].Value.ToString();
+        }
+
+        private void btnModificarMaterial_Click(object sender, EventArgs e)
+        {
+            Material material = dgvListaMateriales.CurrentRow.DataBoundItem as Material;
+            if (material == null)
+            {
+                MessageBox.Show("Seleccione un material válido para modificar.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (!ValidarCampos())
+                return;
+            material.Color = txtColor.Text;
+            material.PesoKg = Convert.ToDouble(txtPesoKg.Text);
+            material.Tipo = cmbTipoMaterial.Text;
+            material.Costo = gestorMaterial.CalcularCosto(material.Tipo, material.PesoKg);
+
+            gestorMaterial.ModificarMaterial(material);
+            ActualizarListaMateriales();
 
         }
     }

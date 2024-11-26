@@ -119,5 +119,15 @@ namespace Quilo3D.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap TrabajoQUILO3D_Pedidos {
+            get {
+                object obj = ResourceManager.GetObject("TrabajoQUILO3D_Pedidos", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }
