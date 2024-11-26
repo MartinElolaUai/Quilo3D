@@ -5,6 +5,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace DAL
 {
@@ -79,6 +80,24 @@ namespace DAL
             }
 
             return status;
+        }
+
+        public void ExportarSPXML(string sp, string fileName, SqlParameter[] parametros) 
+        {
+            try 
+            {
+                String defaulPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+                String filePath = defaulPath + "\\" + fileName + ".xml";
+
+                Leer(sp, parametros).WriteXml(filePath);
+
+                MessageBox.Show("Exportación XML exitosa", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            }
+            catch (Exception ex) 
+            {
+                MessageBox.Show("Error de exportación XML", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
 

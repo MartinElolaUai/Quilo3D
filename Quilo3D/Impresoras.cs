@@ -26,6 +26,8 @@ namespace Quilo3D
         private void btnAgregarImpresora_Click(object sender, EventArgs e)
         {
             Impresora impresora = new Impresora();
+            if (!ValidarCampos())
+                return;
             impresora.Descripcion = txtDescripcion.Text;
             impresora.ConsumoElectrico = Convert.ToInt32(txtConsumoElectrico.Text);
             impresora.IdImpresora = gestorImpresora.CalcularIdImpresora();
@@ -65,11 +67,36 @@ namespace Quilo3D
         private void btnModificar_Click(object sender, EventArgs e)
         {
             Impresora impresora = dgvListaImpresoras.CurrentRow.DataBoundItem as Impresora;
+            if (impresora == null)
+            {
+                MessageBox.Show("Seleccione una impresora válida para modificar.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (!ValidarCampos())
+                return;
+
             impresora.Descripcion = txtDescripcion.Text;
             impresora.ConsumoElectrico = Convert.ToInt32(txtConsumoElectrico.Text);
 
             gestorImpresora.ModificarImpresora(impresora);
             ActualizarListaImpresoras();
+        }
+
+        private bool ValidarCampos() 
+        {
+            if (txtConsumoElectrico.Text == "" || txtDescripcion.Text == "" )
+            {
+                MessageBox.Show("Complete todos los campos para continuar.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
+            if (!int.TryParse(txtConsumoElectrico.Text, out _)) 
+            {
+                MessageBox.Show("El Consumo Eléctrico debe ser un número válido.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
+            return true;
         }
     }
 }

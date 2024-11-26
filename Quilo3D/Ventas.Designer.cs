@@ -30,15 +30,15 @@
         {
             this.dgvListaVentas = new System.Windows.Forms.DataGridView();
             this.btnMenuAtras = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.cmbTipoReporte = new System.Windows.Forms.ComboBox();
+            this.btnGenerarReporte = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaVentas)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvListaVentas
             // 
             this.dgvListaVentas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvListaVentas.Location = new System.Drawing.Point(163, 91);
+            this.dgvListaVentas.Location = new System.Drawing.Point(318, 52);
             this.dgvListaVentas.Name = "dgvListaVentas";
             this.dgvListaVentas.Size = new System.Drawing.Size(717, 437);
             this.dgvListaVentas.TabIndex = 0;
@@ -57,32 +57,39 @@
             this.btnMenuAtras.UseVisualStyleBackColor = false;
             this.btnMenuAtras.Click += new System.EventHandler(this.btnMenuAtras_Click);
             // 
-            // comboBox1
+            // cmbTipoReporte
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(163, 551);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(300, 39);
-            this.comboBox1.TabIndex = 23;
+            this.cmbTipoReporte.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbTipoReporte.FormattingEnabled = true;
+            this.cmbTipoReporte.Items.AddRange(new object[] {
+            "(1) Producto más vendido",
+            "(2) Cliente con más compras",
+            "(3) Productos de más de $10000",
+            "(4) Productos hechos con Ender 3 NEO",
+            "(5) Productos vendidos por fecha "});
+            this.cmbTipoReporte.Location = new System.Drawing.Point(318, 512);
+            this.cmbTipoReporte.Name = "cmbTipoReporte";
+            this.cmbTipoReporte.Size = new System.Drawing.Size(717, 39);
+            this.cmbTipoReporte.TabIndex = 23;
             // 
-            // button1
+            // btnGenerarReporte
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(488, 551);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(234, 39);
-            this.button1.TabIndex = 24;
-            this.button1.Text = "Generar Reporte ";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnGenerarReporte.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGenerarReporte.Location = new System.Drawing.Point(318, 566);
+            this.btnGenerarReporte.Name = "btnGenerarReporte";
+            this.btnGenerarReporte.Size = new System.Drawing.Size(234, 39);
+            this.btnGenerarReporte.TabIndex = 24;
+            this.btnGenerarReporte.Text = "Generar Reporte ";
+            this.btnGenerarReporte.UseVisualStyleBackColor = true;
+            this.btnGenerarReporte.Click += new System.EventHandler(this.btnGenerarReporte_Click);
             // 
             // Ventas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1293, 656);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.btnGenerarReporte);
+            this.Controls.Add(this.cmbTipoReporte);
             this.Controls.Add(this.btnMenuAtras);
             this.Controls.Add(this.dgvListaVentas);
             this.Name = "Ventas";
@@ -97,7 +104,7 @@
 
         private System.Windows.Forms.DataGridView dgvListaVentas;
         private System.Windows.Forms.Button btnMenuAtras;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ComboBox cmbTipoReporte;
+        private System.Windows.Forms.Button btnGenerarReporte;
     }
 }

@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.dgvListaProductos = new System.Windows.Forms.DataGridView();
-            this.txtDescripcionProducto = new System.Windows.Forms.TextBox();
             this.txtPesoProducto = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -45,37 +44,34 @@
             this.label7 = new System.Windows.Forms.Label();
             this.txtValorImpresion = new System.Windows.Forms.TextBox();
             this.btnMenuAtras = new System.Windows.Forms.Button();
+            this.cmbSeleccionarCliente = new System.Windows.Forms.ComboBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txtDescripcionVenta = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaProductos)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvListaProductos
             // 
             this.dgvListaProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvListaProductos.Location = new System.Drawing.Point(268, 96);
+            this.dgvListaProductos.Location = new System.Drawing.Point(451, 135);
             this.dgvListaProductos.Name = "dgvListaProductos";
             this.dgvListaProductos.Size = new System.Drawing.Size(745, 403);
             this.dgvListaProductos.TabIndex = 0;
             this.dgvListaProductos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvListaProductos_CellContentClick);
             // 
-            // txtDescripcionProducto
-            // 
-            this.txtDescripcionProducto.Location = new System.Drawing.Point(15, 112);
-            this.txtDescripcionProducto.Name = "txtDescripcionProducto";
-            this.txtDescripcionProducto.Size = new System.Drawing.Size(172, 20);
-            this.txtDescripcionProducto.TabIndex = 2;
-            // 
             // txtPesoProducto
             // 
-            this.txtPesoProducto.Location = new System.Drawing.Point(15, 149);
+            this.txtPesoProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPesoProducto.Location = new System.Drawing.Point(15, 298);
             this.txtPesoProducto.Name = "txtPesoProducto";
-            this.txtPesoProducto.Size = new System.Drawing.Size(172, 20);
+            this.txtPesoProducto.Size = new System.Drawing.Size(323, 53);
             this.txtPesoProducto.TabIndex = 5;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 96);
+            this.label1.Location = new System.Drawing.Point(12, 190);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(74, 13);
             this.label1.TabIndex = 7;
@@ -85,7 +81,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(12, 135);
+            this.label2.Location = new System.Drawing.Point(12, 282);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(61, 13);
             this.label2.TabIndex = 8;
@@ -95,7 +91,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(12, 185);
+            this.label3.Location = new System.Drawing.Point(12, 370);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(52, 13);
             this.label3.TabIndex = 9;
@@ -103,25 +99,27 @@
             // 
             // cmbMaterial
             // 
+            this.cmbMaterial.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbMaterial.FormattingEnabled = true;
-            this.cmbMaterial.Location = new System.Drawing.Point(15, 201);
+            this.cmbMaterial.Location = new System.Drawing.Point(12, 386);
             this.cmbMaterial.Name = "cmbMaterial";
-            this.cmbMaterial.Size = new System.Drawing.Size(172, 21);
+            this.cmbMaterial.Size = new System.Drawing.Size(323, 39);
             this.cmbMaterial.TabIndex = 10;
             // 
             // cmbImpresorasDisponibles
             // 
+            this.cmbImpresorasDisponibles.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbImpresorasDisponibles.FormattingEnabled = true;
-            this.cmbImpresorasDisponibles.Location = new System.Drawing.Point(15, 250);
+            this.cmbImpresorasDisponibles.Location = new System.Drawing.Point(15, 471);
             this.cmbImpresorasDisponibles.Name = "cmbImpresorasDisponibles";
-            this.cmbImpresorasDisponibles.Size = new System.Drawing.Size(172, 21);
+            this.cmbImpresorasDisponibles.Size = new System.Drawing.Size(320, 39);
             this.cmbImpresorasDisponibles.TabIndex = 11;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(12, 232);
+            this.label4.Location = new System.Drawing.Point(12, 455);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(133, 13);
             this.label4.TabIndex = 12;
@@ -129,9 +127,10 @@
             // 
             // btnProcesarPedido
             // 
-            this.btnProcesarPedido.Location = new System.Drawing.Point(15, 447);
+            this.btnProcesarPedido.Font = new System.Drawing.Font("Impact", 24.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProcesarPedido.Location = new System.Drawing.Point(15, 546);
             this.btnProcesarPedido.Name = "btnProcesarPedido";
-            this.btnProcesarPedido.Size = new System.Drawing.Size(172, 32);
+            this.btnProcesarPedido.Size = new System.Drawing.Size(320, 57);
             this.btnProcesarPedido.TabIndex = 13;
             this.btnProcesarPedido.Text = "Procesar pedido";
             this.btnProcesarPedido.UseVisualStyleBackColor = true;
@@ -140,7 +139,7 @@
             // txtTiempoImpresion
             // 
             this.txtTiempoImpresion.Enabled = false;
-            this.txtTiempoImpresion.Location = new System.Drawing.Point(15, 398);
+            this.txtTiempoImpresion.Location = new System.Drawing.Point(451, 583);
             this.txtTiempoImpresion.Name = "txtTiempoImpresion";
             this.txtTiempoImpresion.Size = new System.Drawing.Size(172, 20);
             this.txtTiempoImpresion.TabIndex = 17;
@@ -148,7 +147,7 @@
             // txtCostoImpresion
             // 
             this.txtCostoImpresion.Enabled = false;
-            this.txtCostoImpresion.Location = new System.Drawing.Point(15, 311);
+            this.txtCostoImpresion.Location = new System.Drawing.Point(847, 583);
             this.txtCostoImpresion.Name = "txtCostoImpresion";
             this.txtCostoImpresion.Size = new System.Drawing.Size(172, 20);
             this.txtCostoImpresion.TabIndex = 18;
@@ -157,7 +156,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(12, 295);
+            this.label5.Location = new System.Drawing.Point(844, 567);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(96, 13);
             this.label5.TabIndex = 19;
@@ -167,7 +166,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(12, 382);
+            this.label6.Location = new System.Drawing.Point(448, 567);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(123, 13);
             this.label6.TabIndex = 20;
@@ -177,7 +176,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(12, 334);
+            this.label7.Location = new System.Drawing.Point(642, 567);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(93, 13);
             this.label7.TabIndex = 22;
@@ -186,7 +185,7 @@
             // txtValorImpresion
             // 
             this.txtValorImpresion.Enabled = false;
-            this.txtValorImpresion.Location = new System.Drawing.Point(15, 350);
+            this.txtValorImpresion.Location = new System.Drawing.Point(645, 583);
             this.txtValorImpresion.Name = "txtValorImpresion";
             this.txtValorImpresion.Size = new System.Drawing.Size(172, 20);
             this.txtValorImpresion.TabIndex = 21;
@@ -205,11 +204,41 @@
             this.btnMenuAtras.UseVisualStyleBackColor = false;
             this.btnMenuAtras.Click += new System.EventHandler(this.btnMenuAtras_Click);
             // 
+            // cmbSeleccionarCliente
+            // 
+            this.cmbSeleccionarCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbSeleccionarCliente.FormattingEnabled = true;
+            this.cmbSeleccionarCliente.Location = new System.Drawing.Point(15, 135);
+            this.cmbSeleccionarCliente.Name = "cmbSeleccionarCliente";
+            this.cmbSeleccionarCliente.Size = new System.Drawing.Size(320, 39);
+            this.cmbSeleccionarCliente.TabIndex = 24;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(12, 119);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(117, 13);
+            this.label8.TabIndex = 25;
+            this.label8.Text = "Seleccionar Cliente";
+            // 
+            // txtDescripcionVenta
+            // 
+            this.txtDescripcionVenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDescripcionVenta.Location = new System.Drawing.Point(15, 216);
+            this.txtDescripcionVenta.Name = "txtDescripcionVenta";
+            this.txtDescripcionVenta.Size = new System.Drawing.Size(323, 53);
+            this.txtDescripcionVenta.TabIndex = 26;
+            // 
             // Pedidos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1293, 656);
+            this.Controls.Add(this.txtDescripcionVenta);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.cmbSeleccionarCliente);
             this.Controls.Add(this.btnMenuAtras);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.txtValorImpresion);
@@ -225,7 +254,6 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtPesoProducto);
-            this.Controls.Add(this.txtDescripcionProducto);
             this.Controls.Add(this.dgvListaProductos);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Pedidos";
@@ -239,7 +267,6 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dgvListaProductos;
-        private System.Windows.Forms.TextBox txtDescripcionProducto;
         private System.Windows.Forms.TextBox txtPesoProducto;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
@@ -255,5 +282,8 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtValorImpresion;
         private System.Windows.Forms.Button btnMenuAtras;
+        private System.Windows.Forms.ComboBox cmbSeleccionarCliente;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox txtDescripcionVenta;
     }
 }

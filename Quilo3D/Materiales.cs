@@ -32,7 +32,9 @@ namespace Quilo3D
         private void btnAgregarMaterial_Click(object sender, EventArgs e)
         {
             Material material = new Material();
-            
+            if (!ValidarCampos())
+                return;
+
             string pesoTexto = Regex.Replace(txtPesoKg.Text, "\\.", ",");
             double pesoKg = Convert.ToDouble(pesoTexto);
             string tipo = cmbTipoMaterial.Text;
@@ -50,6 +52,13 @@ namespace Quilo3D
         private void btnEliminarMaterial_Click(object sender, EventArgs e)
         {
             Material material = dgvListaMateriales.CurrentRow.DataBoundItem as Material;
+            if (material == null)
+            {
+                MessageBox.Show("Seleccione un material válido para eliminar.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if(!ValidarCampos())
+                return;
             gestorMaterial.BajaMaterial(material);
             
             ActualizarListaMateriales();
@@ -60,6 +69,23 @@ namespace Quilo3D
             QUILO3D formularioQuilo3D = new QUILO3D();
             formularioQuilo3D.Show();
             this.Hide();
+        }
+
+        private bool ValidarCampos() 
+        {
+            if (txtColor.Text == "" || txtPesoKg.Text == "" || cmbTipoMaterial.Text == "")
+            {
+                MessageBox.Show("Complete todos los campos para continuar.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            if (!int.TryParse(txtPesoKg.Text, out _)) 
+            {
+                MessageBox.Show("El campo 'Peso en Kg' debe ser un número.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
+
+            return true;
         }
 
         private void dgvListaMateriales_CellContentClick(object sender, DataGridViewCellEventArgs e)

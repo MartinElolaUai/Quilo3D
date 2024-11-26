@@ -37,7 +37,10 @@ namespace BE
             set { idCliente = value; }
         }
 
-
+        public string ApellidoDni
+        {
+            get { return $"{Apellido} - {Dni}"; }
+        }
 
     }
 }

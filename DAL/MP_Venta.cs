@@ -20,7 +20,7 @@ namespace DAL
                 new SqlParameter("@IdVenta", venta.IdVenta),
                 new SqlParameter("@IdCliente", venta.IdCliente),
                 new SqlParameter("@IdProducto", venta.IdProducto),
-                new SqlParameter("@Valor", venta.Valor),
+                new SqlParameter("@Valor", Convert.ToDecimal(venta.Valor)),
                 new SqlParameter("@FechaVenta", venta.FechaVenta),
                 new SqlParameter("@Descripcion", venta.Descripcion)
             };

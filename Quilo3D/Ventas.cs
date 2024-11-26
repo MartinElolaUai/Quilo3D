@@ -38,5 +38,10 @@ namespace Quilo3D
             formularioQuilo3D.Show();
             this.Hide();
         }
+
+        private void btnGenerarReporte_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -7,6 +7,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -31,6 +32,8 @@ namespace Quilo3D
         private void btnAltaCliente_Click(object sender, EventArgs e)
         {
             Cliente cliente = new Cliente();
+            if (!ValidarCampos())
+                return;
             cliente.IdCliente = gestorCliente.CalcularIdCliente();
             cliente.Nombre = txtNombreCliente.Text;
             cliente.Apellido = txtApellidoCliente.Text;
@@ -72,6 +75,13 @@ namespace Quilo3D
             }
         }
 
+        private void btnMenuAtras_Click(object sender, EventArgs e)
+        {
+            QUILO3D formularioQuilo3D = new QUILO3D();
+            formularioQuilo3D.Show();
+            this.Hide();
+        }
+
         private void dgvListaClientes_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             Cliente cliente = dgvListaClientes.CurrentRow.DataBoundItem as Cliente;
@@ -80,11 +90,38 @@ namespace Quilo3D
             txtDniCliente.Text = cliente.Dni.ToString();
         }
 
-        private void btnMenuAtras_Click(object sender, EventArgs e)
+        private bool ValidarCampos() 
         {
-            QUILO3D formularioQuilo3D = new QUILO3D();
-            formularioQuilo3D.Show();
-            this.Hide();
+            if (txtNombreCliente.Text == "" || txtApellidoCliente.Text == "" || txtDniCliente.Text == "")
+            {
+                MessageBox.Show("Complete todos los campos para continuar.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
+            if (!int.TryParse(txtDniCliente.Text, out _))
+            {
+                MessageBox.Show("El DNI debe ser un número válido.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
+            if (!IsValidDni(txtDniCliente.Text))
+            {
+                MessageBox.Show("El DNI debe tener entre 7 y 8 dígitos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
+
+            return true;
         }
+
+        public bool IsValidDni(string dni)
+        {
+            if (string.IsNullOrWhiteSpace(dni))
+                return false;
+
+            string dniPattern = @"^\d{7,8}$";
+            return Regex.IsMatch(dni, dniPattern);
+        }
+
     }
 }

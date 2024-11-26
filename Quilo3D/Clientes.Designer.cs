@@ -51,7 +51,7 @@
             // txtNombreCliente
             // 
             this.txtNombreCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombreCliente.Location = new System.Drawing.Point(84, 150);
+            this.txtNombreCliente.Location = new System.Drawing.Point(72, 143);
             this.txtNombreCliente.Name = "txtNombreCliente";
             this.txtNombreCliente.Size = new System.Drawing.Size(323, 53);
             this.txtNombreCliente.TabIndex = 1;
@@ -59,7 +59,7 @@
             // txtDniCliente
             // 
             this.txtDniCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDniCliente.Location = new System.Drawing.Point(84, 281);
+            this.txtDniCliente.Location = new System.Drawing.Point(71, 331);
             this.txtDniCliente.Name = "txtDniCliente";
             this.txtDniCliente.Size = new System.Drawing.Size(323, 53);
             this.txtDniCliente.TabIndex = 2;
@@ -67,42 +67,46 @@
             // txtApellidoCliente
             // 
             this.txtApellidoCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtApellidoCliente.Location = new System.Drawing.Point(84, 215);
+            this.txtApellidoCliente.Location = new System.Drawing.Point(71, 237);
             this.txtApellidoCliente.Name = "txtApellidoCliente";
             this.txtApellidoCliente.Size = new System.Drawing.Size(323, 53);
             this.txtApellidoCliente.TabIndex = 3;
             // 
             // btnAltaCliente
             // 
+            this.btnAltaCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btnAltaCliente.Font = new System.Drawing.Font("Impact", 24.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAltaCliente.Location = new System.Drawing.Point(116, 358);
+            this.btnAltaCliente.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnAltaCliente.Location = new System.Drawing.Point(107, 418);
             this.btnAltaCliente.Name = "btnAltaCliente";
             this.btnAltaCliente.Size = new System.Drawing.Size(254, 57);
             this.btnAltaCliente.TabIndex = 4;
             this.btnAltaCliente.Text = "Agregar Cliente";
-            this.btnAltaCliente.UseVisualStyleBackColor = true;
+            this.btnAltaCliente.UseVisualStyleBackColor = false;
             this.btnAltaCliente.Click += new System.EventHandler(this.btnAltaCliente_Click);
             // 
             // btnModificarCliente
             // 
+            this.btnModificarCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btnModificarCliente.Font = new System.Drawing.Font("Impact", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModificarCliente.Location = new System.Drawing.Point(116, 432);
+            this.btnModificarCliente.Location = new System.Drawing.Point(107, 496);
             this.btnModificarCliente.Name = "btnModificarCliente";
             this.btnModificarCliente.Size = new System.Drawing.Size(254, 57);
             this.btnModificarCliente.TabIndex = 5;
             this.btnModificarCliente.Text = "Modificar Cliente";
-            this.btnModificarCliente.UseVisualStyleBackColor = true;
+            this.btnModificarCliente.UseVisualStyleBackColor = false;
             this.btnModificarCliente.Click += new System.EventHandler(this.btnModificarCliente_Click);
             // 
             // btnBajaCliente
             // 
+            this.btnBajaCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.btnBajaCliente.Font = new System.Drawing.Font("Impact", 24.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBajaCliente.Location = new System.Drawing.Point(116, 498);
+            this.btnBajaCliente.Location = new System.Drawing.Point(107, 570);
             this.btnBajaCliente.Name = "btnBajaCliente";
             this.btnBajaCliente.Size = new System.Drawing.Size(254, 57);
             this.btnBajaCliente.TabIndex = 6;
             this.btnBajaCliente.Text = "Eliminar Cliente";
-            this.btnBajaCliente.UseVisualStyleBackColor = true;
+            this.btnBajaCliente.UseVisualStyleBackColor = false;
             this.btnBajaCliente.Click += new System.EventHandler(this.btnBajaCliente_Click);
             // 
             // btnMenuAtras
@@ -123,6 +127,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::Quilo3D.Properties.Resources.TemplateQUILO3D_Clientes;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1293, 656);
             this.Controls.Add(this.btnMenuAtras);
             this.Controls.Add(this.btnBajaCliente);
@@ -132,6 +138,7 @@
             this.Controls.Add(this.txtDniCliente);
             this.Controls.Add(this.txtNombreCliente);
             this.Controls.Add(this.dgvListaClientes);
+            this.DoubleBuffered = true;
             this.Name = "Clientes";
             this.Text = "Clientes";
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaClientes)).EndInit();

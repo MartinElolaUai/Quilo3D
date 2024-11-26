@@ -11,9 +11,9 @@ namespace BE
         private int idVenta;
         private int idCliente;
         private int idProducto;
-        private string descripcion;
         private DateTime fechaVenta;
         private double valor;
+        private string descripcion;
 
         public int IdVenta
         {
@@ -36,7 +36,7 @@ namespace BE
         public string Descripcion
         {
             get { return descripcion; }
-            set { string descripcion = value; }
+            set { descripcion = value; }
         }
 
         public int IdProducto

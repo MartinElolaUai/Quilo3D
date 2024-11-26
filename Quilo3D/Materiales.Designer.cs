@@ -45,10 +45,10 @@
             // btnModificarMaterial
             // 
             this.btnModificarMaterial.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.btnModificarMaterial.Font = new System.Drawing.Font("Impact", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModificarMaterial.Location = new System.Drawing.Point(95, 314);
+            this.btnModificarMaterial.Font = new System.Drawing.Font("Impact", 24.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModificarMaterial.Location = new System.Drawing.Point(46, 416);
             this.btnModificarMaterial.Name = "btnModificarMaterial";
-            this.btnModificarMaterial.Size = new System.Drawing.Size(132, 23);
+            this.btnModificarMaterial.Size = new System.Drawing.Size(254, 57);
             this.btnModificarMaterial.TabIndex = 20;
             this.btnModificarMaterial.Text = "Modificar Material";
             this.btnModificarMaterial.UseVisualStyleBackColor = false;
@@ -56,10 +56,10 @@
             // btnEliminarMaterial
             // 
             this.btnEliminarMaterial.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.btnEliminarMaterial.Font = new System.Drawing.Font("Impact", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminarMaterial.Location = new System.Drawing.Point(95, 343);
+            this.btnEliminarMaterial.Font = new System.Drawing.Font("Impact", 24.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminarMaterial.Location = new System.Drawing.Point(46, 479);
             this.btnEliminarMaterial.Name = "btnEliminarMaterial";
-            this.btnEliminarMaterial.Size = new System.Drawing.Size(132, 23);
+            this.btnEliminarMaterial.Size = new System.Drawing.Size(254, 57);
             this.btnEliminarMaterial.TabIndex = 19;
             this.btnEliminarMaterial.Text = "Eliminar Material";
             this.btnEliminarMaterial.UseVisualStyleBackColor = false;
@@ -68,10 +68,10 @@
             // btnAgregarMaterial
             // 
             this.btnAgregarMaterial.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.btnAgregarMaterial.Font = new System.Drawing.Font("Impact", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregarMaterial.Location = new System.Drawing.Point(95, 285);
+            this.btnAgregarMaterial.Font = new System.Drawing.Font("Impact", 24.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregarMaterial.Location = new System.Drawing.Point(46, 353);
             this.btnAgregarMaterial.Name = "btnAgregarMaterial";
-            this.btnAgregarMaterial.Size = new System.Drawing.Size(132, 23);
+            this.btnAgregarMaterial.Size = new System.Drawing.Size(254, 57);
             this.btnAgregarMaterial.TabIndex = 18;
             this.btnAgregarMaterial.Text = "Agregar Material";
             this.btnAgregarMaterial.UseVisualStyleBackColor = false;
@@ -80,7 +80,7 @@
             // dgvListaMateriales
             // 
             this.dgvListaMateriales.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvListaMateriales.Location = new System.Drawing.Point(267, 129);
+            this.dgvListaMateriales.Location = new System.Drawing.Point(360, 130);
             this.dgvListaMateriales.Name = "dgvListaMateriales";
             this.dgvListaMateriales.Size = new System.Drawing.Size(442, 243);
             this.dgvListaMateriales.TabIndex = 17;
@@ -149,7 +149,7 @@
             // 
             // btnMenuAtras
             // 
-            this.btnMenuAtras.Location = new System.Drawing.Point(12, 466);
+            this.btnMenuAtras.Location = new System.Drawing.Point(12, 598);
             this.btnMenuAtras.Name = "btnMenuAtras";
             this.btnMenuAtras.Size = new System.Drawing.Size(75, 23);
             this.btnMenuAtras.TabIndex = 22;
@@ -161,7 +161,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(805, 501);
+            this.ClientSize = new System.Drawing.Size(1293, 656);
             this.Controls.Add(this.btnMenuAtras);
             this.Controls.Add(this.btnModificarMaterial);
             this.Controls.Add(this.btnEliminarMaterial);
