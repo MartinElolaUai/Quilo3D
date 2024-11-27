@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -129,8 +130,8 @@ namespace Quilo3D
             Venta venta = new Venta();
             Cliente cliente = cmbSeleccionarCliente.SelectedItem as Cliente;
 
-            string pesoTexto = Regex.Replace(txtPesoProducto.Text, "\\.", ",");
-            double pesoKg = Convert.ToDouble(pesoTexto);
+            string pesoTexto = Regex.Replace(txtPesoProducto.Text, "\\,", ".");
+            double pesoKg = Convert.ToDouble(pesoTexto, CultureInfo.InvariantCulture);
             double costoTotal = gestorProducto.CalcularCostoTotalProducto(producto.IdImpresora, producto.TiempoImpresion, material.Tipo, pesoKg);
             double valorTotal = gestorProducto.CalcularValorTotalProducto(costoTotal);
 
