@@ -12,8 +12,8 @@ public class DataGridViewConBotonEliminar : DataGridView
                 this.AllowUserToAddRows = false;
                 this.MultiSelect = false;
                 AgregarBotonAccion();
-        }
-        }
+            }
+    }
 
         public void AsignarDatos(object datos)
         {
@@ -21,7 +21,7 @@ public class DataGridViewConBotonEliminar : DataGridView
             this.DataSource = datos;
         }
 
-        private void AgregarBotonAccion()
+    private void AgregarBotonAccion()
         {
             if (!this.Columns.Contains("Acciones"))
             {

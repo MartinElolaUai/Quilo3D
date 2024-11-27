@@ -131,11 +131,11 @@ namespace Quilo3D
 
         private void ConfigurarOrdenColumnas()
         {
+            dgvListaMateriales.Columns["IdMaterial"].DisplayIndex = 1;
             dgvListaMateriales.Columns["Tipo"].DisplayIndex = 2;
             dgvListaMateriales.Columns["Color"].DisplayIndex = 3;
             dgvListaMateriales.Columns["PesoKg"].DisplayIndex = 4;
             dgvListaMateriales.Columns["Costo"].DisplayIndex = 5;
-            dgvListaMateriales.Columns["IdMaterial"].DisplayIndex = 1;
             dgvListaMateriales.Columns["TipoColor"].Visible = false;
         }
 

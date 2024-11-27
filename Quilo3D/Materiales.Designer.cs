@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnModificarMaterial = new System.Windows.Forms.Button();
             this.btnAgregarMaterial = new System.Windows.Forms.Button();
             this.cmbTipoMaterial = new System.Windows.Forms.ComboBox();
@@ -39,7 +38,6 @@
             this.btnMenuAtras = new System.Windows.Forms.Button();
             this.txtPesoKg = new Quilo3D.ValidatingTextBox();
             this.dgvListaMateriales = new DataGridViewConBotonEliminar();
-            this.dataGridViewButtonColumn1 = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaMateriales)).BeginInit();
             this.SuspendLayout();
             // 
@@ -158,8 +156,6 @@
             this.dgvListaMateriales.AllowUserToOrderColumns = true;
             this.dgvListaMateriales.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvListaMateriales.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvListaMateriales.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewButtonColumn1});
             this.dgvListaMateriales.Location = new System.Drawing.Point(420, 143);
             this.dgvListaMateriales.MultiSelect = false;
             this.dgvListaMateriales.Name = "dgvListaMateriales";
@@ -167,18 +163,6 @@
             this.dgvListaMateriales.Size = new System.Drawing.Size(717, 437);
             this.dgvListaMateriales.TabIndex = 34;
             this.dgvListaMateriales.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvListaMateriales_CellClick);
-            // 
-            // dataGridViewButtonColumn1
-            // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.IndianRed;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            this.dataGridViewButtonColumn1.DefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridViewButtonColumn1.HeaderText = "Acciones";
-            this.dataGridViewButtonColumn1.Name = "dataGridViewButtonColumn1";
-            this.dataGridViewButtonColumn1.ReadOnly = true;
-            this.dataGridViewButtonColumn1.Text = "Eliminar";
-            this.dataGridViewButtonColumn1.UseColumnTextForButtonValue = true;
             // 
             // Materiales
             // 
@@ -222,6 +206,5 @@
         private System.Windows.Forms.Button btnMenuAtras;
         private DataGridViewConBotonEliminar dgvListaMateriales;
         private ValidatingTextBox txtPesoKg;
-        private System.Windows.Forms.DataGridViewButtonColumn dataGridViewButtonColumn1;
     }
 }
