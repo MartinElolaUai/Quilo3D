@@ -38,8 +38,8 @@
             this.cmbSeleccionarCliente = new System.Windows.Forms.ComboBox();
             this.txtDescripcionVenta = new System.Windows.Forms.TextBox();
             this.btnGenerarXml = new System.Windows.Forms.Button();
-            this.btnProcesarPedido = new Quilo3D.BotonProcesar();
             this.txtPesoProducto = new Quilo3D.ValidatingTextBox();
+            this.btnProcesarPedido = new Quilo3D.BotonProcesar();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaProductos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -55,6 +55,7 @@
             // 
             // cmbMaterial
             // 
+            this.cmbMaterial.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbMaterial.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbMaterial.FormattingEnabled = true;
             this.cmbMaterial.Location = new System.Drawing.Point(73, 383);
@@ -64,6 +65,7 @@
             // 
             // cmbImpresorasDisponibles
             // 
+            this.cmbImpresorasDisponibles.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbImpresorasDisponibles.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbImpresorasDisponibles.FormattingEnabled = true;
             this.cmbImpresorasDisponibles.Location = new System.Drawing.Point(73, 461);
@@ -140,6 +142,17 @@
             this.btnGenerarXml.UseVisualStyleBackColor = true;
             this.btnGenerarXml.Click += new System.EventHandler(this.btnGenerarXml_Click);
             // 
+            // txtPesoProducto
+            // 
+            this.txtPesoProducto.BackColor = System.Drawing.Color.LightCoral;
+            this.txtPesoProducto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtPesoProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPesoProducto.Location = new System.Drawing.Point(73, 291);
+            this.txtPesoProducto.Name = "txtPesoProducto";
+            this.txtPesoProducto.Size = new System.Drawing.Size(320, 53);
+            this.txtPesoProducto.TabIndex = 29;
+            this.txtPesoProducto.ValidationPattern = "^\\d+$";
+            // 
             // btnProcesarPedido
             // 
             this.btnProcesarPedido.BackColor = System.Drawing.Color.LightBlue;
@@ -152,17 +165,6 @@
             this.btnProcesarPedido.Text = "Procesar pedido";
             this.btnProcesarPedido.UseVisualStyleBackColor = false;
             this.btnProcesarPedido.Click += new System.EventHandler(this.btnProcesarPedido_Click);
-            // 
-            // txtPesoProducto
-            // 
-            this.txtPesoProducto.BackColor = System.Drawing.Color.LightCoral;
-            this.txtPesoProducto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtPesoProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPesoProducto.Location = new System.Drawing.Point(73, 291);
-            this.txtPesoProducto.Name = "txtPesoProducto";
-            this.txtPesoProducto.Size = new System.Drawing.Size(320, 53);
-            this.txtPesoProducto.TabIndex = 29;
-            this.txtPesoProducto.ValidationPattern = "^\\d+$";
             // 
             // Pedidos
             // 
@@ -187,7 +189,9 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Pedidos";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "QUILO3D";
+            this.Load += new System.EventHandler(this.Pedidos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaProductos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

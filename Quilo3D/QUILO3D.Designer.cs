@@ -34,6 +34,7 @@
             this.btnMenuMateriales = new System.Windows.Forms.Button();
             this.btnMenuPedidos = new System.Windows.Forms.Button();
             this.btnMenuVentas = new System.Windows.Forms.Button();
+            this.btnNavegarInstagram = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnMenuImpresoras
@@ -125,6 +126,20 @@
             this.btnMenuVentas.UseVisualStyleBackColor = false;
             this.btnMenuVentas.Click += new System.EventHandler(this.btnMenuVentas_Click);
             // 
+            // btnNavegarInstagram
+            // 
+            this.btnNavegarInstagram.BackColor = System.Drawing.Color.Transparent;
+            this.btnNavegarInstagram.FlatAppearance.BorderSize = 0;
+            this.btnNavegarInstagram.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnNavegarInstagram.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnNavegarInstagram.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNavegarInstagram.Location = new System.Drawing.Point(612, 572);
+            this.btnNavegarInstagram.Name = "btnNavegarInstagram";
+            this.btnNavegarInstagram.Size = new System.Drawing.Size(71, 61);
+            this.btnNavegarInstagram.TabIndex = 23;
+            this.btnNavegarInstagram.UseVisualStyleBackColor = false;
+            this.btnNavegarInstagram.Click += new System.EventHandler(this.btnNavegarInstagram_Click);
+            // 
             // QUILO3D
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -133,6 +148,7 @@
             this.BackgroundImage = global::Quilo3D.Properties.Resources.TemplateQUILO3D_Principal;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1293, 656);
+            this.Controls.Add(this.btnNavegarInstagram);
             this.Controls.Add(this.btnMenuVentas);
             this.Controls.Add(this.btnMenuPedidos);
             this.Controls.Add(this.btnMenuMateriales);
@@ -142,6 +158,7 @@
             this.DoubleBuffered = true;
             this.Name = "QUILO3D";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "QUILO3D";
             this.ResumeLayout(false);
 
@@ -155,5 +172,6 @@
         private System.Windows.Forms.Button btnMenuMateriales;
         private System.Windows.Forms.Button btnMenuPedidos;
         private System.Windows.Forms.Button btnMenuVentas;
+        private System.Windows.Forms.Button btnNavegarInstagram;
     }
 }

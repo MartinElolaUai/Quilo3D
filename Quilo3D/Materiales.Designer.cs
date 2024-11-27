@@ -37,9 +37,9 @@
             this.btnLimpiarFiltro = new System.Windows.Forms.Button();
             this.btnFiltrarLista = new System.Windows.Forms.Button();
             this.btnMenuAtras = new System.Windows.Forms.Button();
+            this.txtPesoKg = new Quilo3D.ValidatingTextBox();
             this.dgvListaMateriales = new DataGridViewConBotonEliminar();
             this.dataGridViewButtonColumn1 = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.txtPesoKg = new Quilo3D.ValidatingTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaMateriales)).BeginInit();
             this.SuspendLayout();
             // 
@@ -69,6 +69,7 @@
             // 
             // cmbTipoMaterial
             // 
+            this.cmbTipoMaterial.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbTipoMaterial.Font = new System.Drawing.Font("Microsoft Sans Serif", 24.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbTipoMaterial.FormattingEnabled = true;
             this.cmbTipoMaterial.Items.AddRange(new object[] {
@@ -139,6 +140,17 @@
             this.btnMenuAtras.UseVisualStyleBackColor = false;
             this.btnMenuAtras.Click += new System.EventHandler(this.btnMenuAtras_Click_1);
             // 
+            // txtPesoKg
+            // 
+            this.txtPesoKg.BackColor = System.Drawing.Color.LightCoral;
+            this.txtPesoKg.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtPesoKg.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPesoKg.Location = new System.Drawing.Point(73, 241);
+            this.txtPesoKg.Name = "txtPesoKg";
+            this.txtPesoKg.Size = new System.Drawing.Size(323, 53);
+            this.txtPesoKg.TabIndex = 35;
+            this.txtPesoKg.ValidationPattern = "^\\d+$";
+            // 
             // dgvListaMateriales
             // 
             this.dgvListaMateriales.AllowUserToAddRows = false;
@@ -168,17 +180,6 @@
             this.dataGridViewButtonColumn1.Text = "Eliminar";
             this.dataGridViewButtonColumn1.UseColumnTextForButtonValue = true;
             // 
-            // txtPesoKg
-            // 
-            this.txtPesoKg.BackColor = System.Drawing.Color.LightCoral;
-            this.txtPesoKg.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtPesoKg.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPesoKg.Location = new System.Drawing.Point(73, 241);
-            this.txtPesoKg.Name = "txtPesoKg";
-            this.txtPesoKg.Size = new System.Drawing.Size(323, 53);
-            this.txtPesoKg.TabIndex = 35;
-            this.txtPesoKg.ValidationPattern = "^\\d+$";
-            // 
             // Materiales
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -200,7 +201,9 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Materiales";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Materiales";
+            this.Load += new System.EventHandler(this.Materiales_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaMateriales)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

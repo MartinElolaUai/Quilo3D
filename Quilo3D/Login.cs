@@ -11,6 +11,8 @@ namespace Quilo3D
         public frmLogin()
         {
             InitializeComponent();
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
         }
 
         BLL_Login gestorLogin = new BLL_Login();
@@ -112,5 +114,10 @@ namespace Quilo3D
             }
         }
 
+        private void btnNavegarInstagram_Click(object sender, EventArgs e)
+        {
+            string url = "https://www.instagram.com/quilo.ba/";
+            System.Diagnostics.Process.Start(url);
+        }
     }
 }

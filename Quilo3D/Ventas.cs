@@ -16,6 +16,12 @@ namespace Quilo3D
         public Ventas()
         {
             InitializeComponent();
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+        }
+
+        private void Ventas_Load(object sender, EventArgs e)
+        {
             ActualizarListaVentas();
             InicializarRecaudadoGanancia();
             drFiltroVentas.FiltrarClick += DateRangePicker_FiltrarClick;

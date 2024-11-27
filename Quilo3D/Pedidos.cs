@@ -18,6 +18,12 @@ namespace Quilo3D
         public Pedidos()
         {
             InitializeComponent();
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+        }
+
+        private void Pedidos_Load(object sender, EventArgs e)
+        {
             InicializarComboboxImpresoras();
             InicializarComboboxMaterial();
             InicializarComboboxClientes();
@@ -169,5 +175,6 @@ namespace Quilo3D
             dgvListaProductos.Columns["IdMaterial"].Visible = false;
             dgvListaProductos.Columns["IdImpresora"].Visible = false;
         }
+
     }
 }

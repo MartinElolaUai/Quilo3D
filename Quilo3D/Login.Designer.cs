@@ -32,6 +32,7 @@
             this.txtContraseniaUsuario = new System.Windows.Forms.TextBox();
             this.txtNombreUsuario = new System.Windows.Forms.TextBox();
             this.scSQL = new System.ServiceProcess.ServiceController();
+            this.btnNavegarInstagram = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnIniciarSesion
@@ -71,6 +72,20 @@
             // 
             this.scSQL.ServiceName = "SharedAccess";
             // 
+            // btnNavegarInstagram
+            // 
+            this.btnNavegarInstagram.BackColor = System.Drawing.Color.Transparent;
+            this.btnNavegarInstagram.FlatAppearance.BorderSize = 0;
+            this.btnNavegarInstagram.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnNavegarInstagram.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnNavegarInstagram.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNavegarInstagram.Location = new System.Drawing.Point(611, 572);
+            this.btnNavegarInstagram.Name = "btnNavegarInstagram";
+            this.btnNavegarInstagram.Size = new System.Drawing.Size(71, 61);
+            this.btnNavegarInstagram.TabIndex = 24;
+            this.btnNavegarInstagram.UseVisualStyleBackColor = false;
+            this.btnNavegarInstagram.Click += new System.EventHandler(this.btnNavegarInstagram_Click);
+            // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -79,12 +94,14 @@
             this.BackgroundImage = global::Quilo3D.Properties.Resources.TemplateQUILO3D_LOGIN;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1293, 656);
+            this.Controls.Add(this.btnNavegarInstagram);
             this.Controls.Add(this.txtNombreUsuario);
             this.Controls.Add(this.txtContraseniaUsuario);
             this.Controls.Add(this.btnIniciarSesion);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "frmLogin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -97,6 +114,7 @@
         private System.Windows.Forms.TextBox txtContraseniaUsuario;
         private System.Windows.Forms.TextBox txtNombreUsuario;
         private System.ServiceProcess.ServiceController scSQL;
+        private System.Windows.Forms.Button btnNavegarInstagram;
     }
 }
 

@@ -18,6 +18,12 @@ namespace Quilo3D
         public Clientes()
         {
             InitializeComponent();
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+        }
+
+        private void Clientes_Load(object sender, EventArgs e)
+        {
             ActualizarListaClientes();
         }
 
@@ -138,5 +144,6 @@ namespace Quilo3D
             dgvListaClientes.Columns["ApellidoDni"].DisplayIndex = 4;
             dgvListaClientes.Columns["ApellidoDni"].Visible = false;
         }
+
     }
 }

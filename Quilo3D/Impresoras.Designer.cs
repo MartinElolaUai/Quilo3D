@@ -144,7 +144,9 @@
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Impresoras";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Impresoras";
+            this.Load += new System.EventHandler(this.Impresoras_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaImpresoras)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -23,7 +23,7 @@ public class DataGridViewConBotonEliminar : DataGridView
 
         private void AgregarBotonAccion()
         {
-            if (!this.Columns.Contains("btnAccion"))
+            if (!this.Columns.Contains("Acciones"))
             {
                 DataGridViewButtonColumn btnAccion = new DataGridViewButtonColumn
                 {

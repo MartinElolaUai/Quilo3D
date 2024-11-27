@@ -162,7 +162,9 @@
             this.DoubleBuffered = true;
             this.Name = "Clientes";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Clientes";
+            this.Load += new System.EventHandler(this.Clientes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaClientes)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

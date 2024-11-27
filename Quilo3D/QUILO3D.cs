@@ -16,6 +16,8 @@ namespace Quilo3D
         public QUILO3D()
         {
             InitializeComponent();
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
         }
 
         private void btnImpresoras_Click(object sender, EventArgs e)
@@ -50,6 +52,12 @@ namespace Quilo3D
             Clientes clientes = new Clientes();
             clientes.Show();
             this.Hide();
+        }
+
+        private void btnNavegarInstagram_Click(object sender, EventArgs e)
+        {
+            string url = "https://www.instagram.com/quilo.ba/";
+            System.Diagnostics.Process.Start(url);
         }
     }
 }

@@ -14,6 +14,12 @@ namespace Quilo3D
         public Impresoras()
         {
             InitializeComponent();
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+        }
+
+        private void Impresoras_Load(object sender, EventArgs e)
+        {
             ActualizarListaImpresoras();
         }
 
@@ -111,5 +117,6 @@ namespace Quilo3D
         {
             gestorImpresora.ExportarXml();
         }
+
     }
 }

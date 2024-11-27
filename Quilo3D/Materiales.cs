@@ -18,6 +18,12 @@ namespace Quilo3D
         public Materiales()
         {
             InitializeComponent();
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+        }
+
+        private void Materiales_Load(object sender, EventArgs e)
+        {
             ActualizarListaMateriales();
         }
 
@@ -155,5 +161,6 @@ namespace Quilo3D
                 }
             }   
         }
+
     }
 }
