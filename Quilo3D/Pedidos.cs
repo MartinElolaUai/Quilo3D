@@ -151,7 +151,6 @@ namespace Quilo3D
 
             ActualizarListaProductos();
             ActualizarDatosProducto(costoTotal.ToString(), producto.TiempoImpresion.ToString(), valorTotal.ToString());
-
         }
 
         private void btnProcesarPedido_Click(object sender, EventArgs e)
