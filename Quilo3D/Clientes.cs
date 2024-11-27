@@ -39,8 +39,7 @@ namespace Quilo3D
         private void btnAltaCliente_Click(object sender, EventArgs e)
         {
             Cliente cliente = new Cliente();
-            if (!ValidarCampos())
-                return;
+            if (!ValidarCampos()) return;
             cliente.IdCliente = gestorCliente.CalcularIdCliente();
             cliente.Nombre = txtNombreCliente.Text;
             cliente.Apellido = txtApellidoCliente.Text;
@@ -53,6 +52,8 @@ namespace Quilo3D
         private void btnModificarCliente_Click(object sender, EventArgs e)
         {
             Cliente cliente = dgvListaClientes.CurrentRow.DataBoundItem as Cliente;
+            if (!ValidarCampos()) return;
+            
             if (cliente != null)
             {
                 cliente.Nombre = txtNombreCliente.Text;
@@ -71,6 +72,8 @@ namespace Quilo3D
         private void btnBajaCliente_Click(object sender, EventArgs e)
         {
             Cliente cliente = dgvListaClientes.CurrentRow.DataBoundItem as Cliente;
+            if (!ValidarCampos()) return;
+            
             if (cliente != null) 
             {
                 gestorCliente.BajaCliente(cliente);
