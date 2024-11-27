@@ -70,7 +70,7 @@
             // 
             // scSQL
             // 
-            this.scSQL.ServiceName = "SharedAccess";
+            this.scSQL.ServiceName = "MSSQLSERVER";
             // 
             // btnNavegarInstagram
             // 
