@@ -76,8 +76,12 @@ namespace Quilo3D
                 MessageBox.Show("El campo 'Peso en Kg' debe ser un número.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
-
-
+            if (cmbSeleccionarCliente.SelectedItem as Cliente == null) 
+            {
+                MessageBox.Show("Seleccione un cliente válido para continuar.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            
             return true;
         }
 
@@ -118,12 +122,12 @@ namespace Quilo3D
         private void ProcesarPedido() 
         {
             Pedido producto = new Pedido();
+            if (!ValidarCampos())
+                return;
             Impresora impresora = cmbImpresorasDisponibles.SelectedItem as Impresora;
             Material material = cmbMaterial.SelectedItem as Material;
             Venta venta = new Venta();
             Cliente cliente = cmbSeleccionarCliente.SelectedItem as Cliente;
-            if (!ValidarCampos())
-                return;
 
             string pesoTexto = Regex.Replace(txtPesoProducto.Text, "\\.", ",");
             double pesoKg = Convert.ToDouble(pesoTexto);

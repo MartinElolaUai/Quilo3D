@@ -11,7 +11,7 @@ namespace DAL
 {
     public class Acceso
     {
-        SqlConnection connection = new SqlConnection(@"Data Source=ELOLA;Initial Catalog=QUILO3D;Integrated Security=True;");
+        SqlConnection connection = new SqlConnection(@"Data Source=.;Initial Catalog=QUILO3D;Integrated Security=True;");
 
         public void abrir()
         {

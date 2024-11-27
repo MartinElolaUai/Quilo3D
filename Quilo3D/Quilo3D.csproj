@@ -109,9 +109,6 @@
     <Compile Include="DateRange.Designer.cs">
       <DependentUpon>DateRange.cs</DependentUpon>
     </Compile>
-    <Compile Include="SearchableComboBox.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
     <Compile Include="ValidatingTextBox.cs">
       <SubType>Component</SubType>
     </Compile>
